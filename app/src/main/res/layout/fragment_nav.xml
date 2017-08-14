@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="48dp"
+              android:gravity="center_vertical"
+              android:orientation="horizontal">
+    <com.gta.zssx.fun.adjustCourse.model.nav.NavigationButton
+        android:id="@+id/nav_my_apply"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:paddingLeft="@dimen/dp_12"
+        android:paddingRight="@dimen/dp_12" />
+
+    <com.gta.zssx.fun.adjustCourse.model.nav.NavigationButton
+        android:id="@+id/nav_confirm_apply"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:paddingLeft="@dimen/dp_12"
+        android:paddingRight="@dimen/dp_12" />
+
+    <com.gta.zssx.fun.adjustCourse.model.nav.NavigationButton
+        android:visibility="gone"
+        android:id="@+id/nav_review_apply"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:paddingLeft="@dimen/dp_12"
+        android:paddingRight="@dimen/dp_12" />
+
+</LinearLayout>

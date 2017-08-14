@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_oa_attachment_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.gta.zssx.mobileOA.view.page.AttachmentDetailActivity">
+
+    <include layout="@layout/include_toolbar" />
+
+    <ImageView
+        android:id="@+id/iv_type"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_above="@+id/tv_name"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/log_register_add1_nor" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/progressBar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp_4"
+        android:text="请假申请单.doc" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <ImageView
+        android:id="@+id/iv_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/progressBar"
+        android:layout_alignTop="@+id/progressBar"
+        android:src="@drawable/ec_evaluation_ic_error"
+        android:layout_marginLeft="@dimen/dp_4"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_downloadInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/progressBar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp_4">
+
+        <TextView
+            android:id="@+id/tv_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2%" />
+
+        <TextView
+            android:id="@+id/tv_currentSize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/tv_progress"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/tv_progress"
+            android:text="0.2M" />
+
+        <TextView
+            android:id="@+id/tv_totalSize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/tv_progress"
+            android:layout_toRightOf="@+id/tv_currentSize"
+            android:text="/2M"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_download"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_downloadInfo"
+        android:layout_centerHorizontal="true"
+        android:text="立即下载" />
+
+
+</RelativeLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <com.gta.zssx.patrolclass.popup.AnimationTextView
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="15dp"
+        android:id="@+id/tv_adjust_course"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:drawablePadding="6dp"
+        android:drawableTop="@drawable/the_substitute_for"
+        android:gravity="center_horizontal"
+        android:text="调代课申请"
+        android:textColor="@color/gray_666666"
+        android:textSize="12sp"/>
+</LinearLayout>

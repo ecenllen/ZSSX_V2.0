@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/img_show_float_bg"
+    android:id="@+id/layout_duty_check_indicate">
+    <TextView
+        android:paddingLeft="10dp"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_duty_oval_green"
+        android:drawablePadding="10dp"
+        android:text="值日检查登记"/>
+    <android.support.v7.widget.RecyclerView
+        android:paddingLeft="20dp"
+        android:id="@+id/recycler_view_check_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"/>
+    <TextView
+        android:id="@+id/tv_save_check_info_text"
+        android:paddingLeft="10dp"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_duty_register_oval_red"
+        android:drawablePadding="10dp"
+        android:text="保存登记"/>
+</LinearLayout>

@@ -1,0 +1,30 @@
+{
+  "Data": [
+    {
+      "ClassName": "17级计算机一班",
+      "RegisterDataList": [
+        {
+          "WeekDate": "第十三周",
+          "TimeSlot": "05月29日-06月4日",
+          "AllState": "登记",
+          "State": "未登记",
+          "ClassName": ""
+        },
+        {
+          "WeekDate": "第十四周",
+          "TimeSlot": "05月23日-06月5日",
+          "AllState": "修改",
+          "State": "未送审",
+          "ClassName": ""
+        },
+        {
+          "WeekDate": "第十五周",
+          "TimeSlot": "05月2日-06月9日",
+          "AllState": "修改",
+          "State": "未通过",
+          "ClassName": ""
+        }
+      ]
+    }
+  ]
+}

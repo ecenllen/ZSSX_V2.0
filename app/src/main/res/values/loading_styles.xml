@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="Loading">
+        <attr name="gBackgroundLineSize" format="dimension"/>
+        <attr name="gForegroundLineSize" format="dimension"/>
+        <attr name="gBackgroundColor" format="reference|color"/>
+        <attr name="gForegroundColor" format="reference|color"/>
+        <attr name="gAutoRun" format="boolean"/>
+        <attr name="gProgressFloat" format="float"/>
+    </declare-styleable>
+
+    <array name="g_default_loading_fg">
+        <item>#ff9800</item>
+        <item>#009657</item>
+        <item>#9c27b0</item>
+        <item>#5677fc</item>
+        <item>#e91e63</item>
+    </array>
+</resources>

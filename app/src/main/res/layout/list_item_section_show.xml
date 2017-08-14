@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_item"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    <LinearLayout
+        android:background="@drawable/detail_item_green_hape"
+        android:layout_alignParentRight="true"
+        android:layout_width="125dp"
+        android:layout_height="32dp"
+        android:layout_margin="5dp"
+
+        android:gravity="center">
+        <TextView
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:id="@+id/tv_class_section"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="XXX"
+            android:gravity="center"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:textColor="@color/word_color_666666"
+            android:textSize="15dp"/>
+
+
+        <ImageView
+            android:visibility="visible"
+            android:id="@+id/iv_delete"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:padding="4dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="5dp"
+            android:src ="@drawable/ic_item_delete_single"/>
+    </LinearLayout>
+
+
+</RelativeLayout>

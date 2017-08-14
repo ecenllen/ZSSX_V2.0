@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:background="@color/gray_slight"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="0.2dp"
+        android:layout_marginRight="0.2dp"
+        android:gravity="center_vertical">
+        <TextView
+            android:id="@+id/tv_title_show"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:text="已选择"/>
+        <ImageView
+            android:id="@+id/iv_delete_all_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:src="@drawable/ic_item_delete_all"
+            android:layout_marginRight="10dp"/>
+    </LinearLayout>
+    <include layout="@layout/include_line"/>
+    <ListView
+        android:background="@color/wirte_ffffff"
+        android:layout_marginLeft="0.2dp"
+        android:layout_marginRight="0.2dp"
+        android:id="@+id/lv_count_num_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@null"
+        android:scrollbars="none">
+    </ListView>
+</LinearLayout>

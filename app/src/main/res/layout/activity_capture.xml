@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:orientation="vertical">
+
+    <include
+        android:id="@+id/capture_toolbar"
+        layout="@layout/include_toolbar"/>
+
+    <SurfaceView
+        android:id="@+id/capture_preview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/capture_toolbar"
+        />
+
+    <RelativeLayout
+        android:id="@+id/capture_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/capture_toolbar">
+
+        <TextView
+            android:id="@+id/tv_title_assets"
+            android:layout_width="220dp"
+            android:layout_height="45dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:background="#80000000"
+            android:gravity="center"
+            android:text="请扫描资产二维码"
+            android:textColor="@color/wirte_ffffff"
+            android:textSize="18sp"
+            android:visibility="gone"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_progress"
+            android:visibility="gone"
+            android:gravity="center"
+            android:layout_width="220dp"
+            android:layout_height="45dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:background="#afafaf"
+            >
+
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ProgressBar
+                    android:layout_marginRight="10dp"
+                    android:id="@+id/pb_loading"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:indeterminateDrawable="@drawable/load_progress"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="正在识别"
+                    android:textColor="@color/wirte_ffffff"
+                    android:textSize="18sp"
+                    />
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/capture_crop_view"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="将二维码放入框内，即可自动扫描"
+            android:textColor="@color/white"
+            android:textSize="16sp"/>
+
+        <ImageView
+
+            android:id="@+id/capture_mask_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@id/capture_crop_view"
+            android:background="@drawable/shadow"/>
+
+        <ImageView
+            android:id="@+id/capture_mask_left"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_above="@id/capture_mask_bottom"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/capture_mask_top"
+            android:layout_toLeftOf="@id/capture_crop_view"
+            android:background="@drawable/shadow"/>
+
+        <ImageView
+            android:id="@+id/capture_mask_right"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_above="@id/capture_mask_bottom"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/capture_mask_top"
+            android:layout_toRightOf="@id/capture_crop_view"
+            android:background="@drawable/shadow"/>
+
+        <ImageView
+            android:id="@+id/capture_mask_top"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="@drawable/shadow"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"/>
+
+        <RelativeLayout
+            android:id="@+id/capture_crop_view"
+            android:layout_width="220dp"
+            android:layout_height="220dp"
+            android:background="@drawable/qr_code_bg"
+            android:layout_below="@+id/capture_mask_top"
+            android:layout_centerHorizontal="true">
+
+            <ImageView
+                android:id="@+id/capture_scan_line"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/scan_line"/>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/framelayout"
+        android:layout_width="match_parent"
+        android:layout_height="145dp"
+        android:layout_alignParentBottom="true">
+
+
+        <TextView
+            android:id="@+id/scan_result_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#1c1c1c"
+            android:gravity="center_vertical"
+            android:padding="5dp"
+            android:text="最近5个盘点结果："
+            android:textColor="@color/wirte_ffffff"
+            android:visibility="gone"/>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/scan_result_tv"
+            >
+
+
+        </android.support.v4.view.ViewPager>
+
+
+        <com.gta.utils.viewPagerIndicator.CirclePageIndicator
+            android:id="@+id/indicator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            app:fillColor="#FFFFFF"
+            app:pageColor="#808080"
+            app:radius="3dp"
+            app:strokeColor="#808080"
+            app:strokeWidth="0dp"
+            />
+    </RelativeLayout>
+
+</RelativeLayout>

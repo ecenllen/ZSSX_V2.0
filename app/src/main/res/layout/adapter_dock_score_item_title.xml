@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+
+    <ImageView
+        android:id="@+id/color_line"
+        android:layout_width="match_parent"
+        android:layout_height="2.5dp"
+        android:src="@drawable/color_line"
+        />
+
+    <TextView
+        android:layout_toLeftOf="@+id/tv_dock_score_adapter_score"
+        android:gravity="center_vertical"
+        android:minHeight="37.5dp"
+        android:id="@+id/tv_dock_score_adapter_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/color_line"
+        android:background="@color/white"
+        android:padding="10dp"
+        android:text="教师分"
+        android:textColor="@color/main_color"
+        />
+
+    <TextView
+        android:visibility="gone"
+        android:layout_marginLeft="5dp"
+        android:layout_below="@id/color_line"
+        android:textColor="@color/black"
+        android:id="@+id/tv_dock_score_adapter_score"
+        android:layout_width="35dp"
+        android:layout_height="37.5dp"
+        android:background="@color/white"
+        android:text=""
+        android:gravity="center"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+</RelativeLayout>

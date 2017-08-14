@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/choose_all_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/section_header_tv_bg"
+        android:orientation="vertical"
+        android:visibility="gone"
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:src="@drawable/color_line"/>
+
+        <LinearLayout
+            android:id="@+id/layout_select_whole"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp">
+
+            <CheckBox
+                android:id="@+id/checkbox_all"
+                android:button="@drawable/checkbox_selector"
+                android:background="@null"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:clickable="false"
+                android:layout_gravity="center_vertical"/><!--style="@style/customCheckBox"  -->
+
+
+            <TextView
+                android:id="@+id/section_header_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="25dp"
+                android:paddingBottom="4dp"
+                android:paddingEnd="12dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:paddingStart="12dp"
+                android:paddingTop="4dp"
+                android:textColor="@color/section_header_tv"
+                android:textSize="@dimen/section_header_tv"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/layout_select_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_image_section_item"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp">
+
+        <CheckBox
+            android:id="@+id/checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dp"
+            android:clickable="false"
+            android:button="@drawable/checkbox_selector"
+            android:background="@null"
+            /><!--style="@style/customCheckBox"  -->
+
+        <TextView
+            android:id="@+id/section_name_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_marginBottom="2dp"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/checkbox"
+            android:text="123"
+            android:textColor="@color/gray_999999"
+            android:textSize="@dimen/section_name_tv"/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/checkbox"
+        android:layout_marginLeft="12dp"
+        android:layout_marginStart="12dp"
+        android:background="#ffE5E5E5"/>
+</LinearLayout>

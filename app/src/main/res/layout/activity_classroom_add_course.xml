@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/f4f4f4"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical">
+
+    <!--搜索课程-->
+    <LinearLayout
+        android:id="@+id/layout_search_course"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:background="@color/wirte_ffffff"
+        android:orientation="vertical">
+
+        <com.gta.zssx.pub.widget.ClearEditText
+            android:id="@+id/search_edit_text_course"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@null"
+            android:drawableLeft="@drawable/ic_magnifier"
+            android:drawablePadding="12dp"
+            android:drawableRight="@drawable/ic_close_search"
+            android:hint="@string/text_search_in_all_course"
+            android:singleLine="true"
+            android:textSize="15sp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/divide_line"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/layout_count_num"
+        android:layout_below="@+id/layout_search_course"
+        android:background="@color/wirte_ffffff">
+        <!--我的课程，默认展示-->
+        <LinearLayout
+            android:id="@+id/layout_my_course_result"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/wirte_ffffff"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/tv_my_course"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="我的课程"
+                android:textColor="@color/word_color_666666"
+                android:textSize="18sp"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_my_course_result"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:overScrollMode="never">
+            </android.support.v7.widget.RecyclerView>
+        </LinearLayout>
+
+        <!--搜索结果展示-->
+        <LinearLayout
+            android:id="@+id/layout_search_result"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/wirte_ffffff"
+            android:orientation="vertical"
+            android:visibility="gone">
+            <TextView
+                android:id="@+id/tv_add_key_word_course"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:text="添加课程xxx"
+                android:textColor="@color/word_color_999999"
+                android:textSize="@dimen/sp_16"
+                android:visibility="gone"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_search_result"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:overScrollMode="never">
+            </android.support.v7.widget.RecyclerView>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#ffffff">
+
+
+    <include
+        layout="@layout/include_buttom_tab"
+        />
+
+
+    <ImageView
+        android:id="@+id/iv_home_page_log"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar_main"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/home_page2"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:paddingTop="15dp"
+        android:id="@+id/recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_layout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/iv_home_page_log"
+        android:overScrollMode="never">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottom_layout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/iv_home_page_log"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--课堂日志-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="107dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="15dp"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                >
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="15dp"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:id="@+id/ll_class_log"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/class_log_home_selector"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="10dp"
+                            android:text="课堂日志"
+                            android:textColor="@color/wirte_ffffff"/>
+
+                        <TextView
+                            android:layout_width="90dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/classroom_log_2"
+                            />
+                    </RelativeLayout>
+                </FrameLayout>
+
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:id="@+id/ll_class_patrol"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/tour_class_home_selector"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="10dp"
+                            android:text="课堂巡视"
+                            android:textColor="@color/wirte_ffffff"/>
+
+                        <TextView
+                            android:layout_width="90dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="50dp"
+                            android:background="@drawable/tour_class_3"
+                            />
+                    </RelativeLayout>
+                </FrameLayout>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="107dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="15dp"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:id="@+id/ll_oa"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/oa_home_selector"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="10dp"
+                            android:text="OA协同"
+                            android:textColor="@color/wirte_ffffff"/>
+
+                        <TextView
+                            android:layout_width="90dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/oa_6"/>
+                    </RelativeLayout>
+                </FrameLayout>
+
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+
+                    <RelativeLayout
+                        android:id="@+id/ll_adjust_course"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/adjust_course_home_selector"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="10dp"
+                            android:text="调代课"
+                            android:textColor="@color/wirte_ffffff"/>
+
+                        <TextView
+                            android:layout_width="90dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="53dp"
+                            android:background="@drawable/the_substitute_5"
+                            />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/indicator_adjust_course_home"
+                        android:layout_width="wrap_content"
+                        android:layout_height="14dp"
+                        android:layout_gravity="right"
+                        android:background="@drawable/ic_red_dot"
+                        android:ellipsize="none"
+                        android:gravity="center"
+                        android:lines="1"
+                        android:minWidth="14dp"
+                        android:paddingLeft="3dp"
+                        android:paddingRight="3dp"
+                        android:singleLine="true"
+                        android:text="1"
+                        android:textColor="@color/wirte_ffffff"
+                        android:textSize="@dimen/sp_10"
+                        android:visibility="gone"
+                        />
+                </FrameLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="107dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="15dp"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:id="@+id/ll_asset"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/assert_home_selector"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="10dp"
+                            android:text="资产管理"
+                            android:textColor="@color/wirte_ffffff"/>
+
+                        <TextView
+                            android:layout_width="90dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/assets_management_4"
+                            />
+                    </RelativeLayout>
+                </FrameLayout>
+
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:id="@+id/ll_schedule_search"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/adjust_course_home_selector"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="10dp"
+                            android:text="课表查询"
+                            android:textColor="@color/wirte_ffffff"/>
+
+                        <TextView
+                            android:layout_width="90dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="57dp"
+                            android:background="@drawable/schedule_the_query_1"
+                            />
+                    </RelativeLayout>
+                </FrameLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="107dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="15dp"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:id="@+id/ll_dormitory"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/dormitory_home_selector"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="10dp"
+                            android:text="宿舍"
+                            android:textColor="@color/wirte_ffffff"/>
+
+                        <TextView
+                            android:layout_width="90dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/ic_dormitory_main"
+                            />
+                    </RelativeLayout>
+                </FrameLayout>
+
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:id="@+id/ll_classroom_feedback"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/classroom_home_selector"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="10dp"
+                            android:text="课堂教学反馈"
+                            android:textColor="@color/wirte_ffffff"/>
+
+                        <TextView
+                            android:layout_width="90dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/icon_classroom_main"
+                            />
+                    </RelativeLayout>
+                </FrameLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="107dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="15dp"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:id="@+id/ll_dormitory2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/assert_home_selector"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="10dp"
+                            android:text="测试宿舍列表-有选项设置"
+                            android:textColor="@color/wirte_ffffff"/>
+
+                        <TextView
+                            android:layout_width="90dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/assets_management_4"
+                            />
+                    </RelativeLayout>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:id="@+id/ll_test_class"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/assert_home_selector"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="10dp"
+                            android:text="测试录入姓名多项（班级/宿舍）维度"
+                            android:textColor="@color/wirte_ffffff"/>
+
+                        <TextView
+                            android:layout_width="90dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/assets_management_4"
+                            />
+                    </RelativeLayout>
+                </FrameLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_main"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/app_bar"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/main_color"
+        android:minHeight="@dimen/app_bar"
+        app:title=" ">
+
+        <TextView
+            android:id="@+id/tv_toolbar_title_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:textSize="21sp"/>
+    </android.support.v7.widget.Toolbar>
+</RelativeLayout>

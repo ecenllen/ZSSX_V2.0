@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#1c1c1c"
+              android:orientation="vertical">
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#333333"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/scan_count_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text=""
+                android:textColor="@color/wirte_ffffff"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/scan_count_tv"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:text="已盘点"
+                android:textColor="@color/wirte_ffffff"/>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="#333333"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:id="@+id/scan_name_tv"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="连续性收费电视似懂非懂斯蒂芬森松岛枫"
+                android:textColor="@color/wirte_ffffff"/>
+
+            <TextView
+                android:paddingTop="5dp"
+                android:id="@+id/tv_look_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/scan_name_tv"
+                android:text="（查看详情）"
+                android:textColor="@color/main_color"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/scan_name_tv"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="规格型号："
+                    android:textColor="@color/gray_666666"/>
+
+                <TextView
+                    android:id="@+id/tv_model"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/gray_666666"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:id="@+id/tv_message_show"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/message_view"
+        android:padding="10dp"
+        android:text=""
+        android:textColor="@color/white"/>
+
+</LinearLayout>

@@ -1,0 +1,25 @@
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
+
+ext {
+
+    android = [
+            compileSdkVersion: 25,
+            buildToolsVersion: "25.0.0",
+            applicationId    : "com.gta.zssx",
+            minSdkVersion    : 16, // Android 4.1
+            targetSdkVersion : 25,
+            versionCode      : 10,
+            versionName      : "2.0",
+            supportVersion   : '25.3.1'
+    ]
+
+}
+
+
+
+
+

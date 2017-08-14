@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:id="@+id/tv_sign_date_my_class"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:drawablePadding="10dp"
+            android:drawableRight="@drawable/pub_arrow_gray_ic"
+            android:gravity="center"
+            android:paddingRight="10dp"
+            android:text="the_date"
+            android:textColor="@color/word_color_999999"
+            android:textSize="@dimen/size40"/>
+
+
+        <TextView
+            android:id="@+id/tv_class_section_data_my_class_status"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:text=" "
+            android:textColor="@color/word_color_999999"
+            android:textSize="@dimen/size40"/>
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/list_item_class_data_show_my_class"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <TextView
+            android:id="@+id/not_result_text_show_my_class"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingTop="220dp"
+            android:text="@string/not_record_now"
+            android:visibility="gone"/>
+    </FrameLayout>
+</LinearLayout>

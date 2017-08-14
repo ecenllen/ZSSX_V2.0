@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:gravity="center"
+            android:id="@+id/go_on_plan_class"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/add_plan_class_bg"
+            android:drawablePadding="5dp"
+            android:text="继续按计划巡课"
+            android:textColor="@color/tab_sel_bg"
+            android:textSize="17sp" />
+
+        <TextView
+            android:gravity="center"
+            android:id="@+id/go_on_random_class"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:drawableLeft="@drawable/add_random_class_bg"
+            android:drawablePadding="5dp"
+            android:text="继续随机巡课"
+            android:textColor="@color/tab_sel_bg"
+            android:textSize="17sp" />
+    </RelativeLayout>
+
+</LinearLayout>

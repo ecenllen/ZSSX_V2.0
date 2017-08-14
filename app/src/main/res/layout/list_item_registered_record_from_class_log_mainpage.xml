@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:orientation="vertical"
+    android:padding="2dp"
+    card_view:cardPreventCornerOverlap="true"
+    app:cardCornerRadius="8dp">
+
+    <LinearLayout
+        android:background="@drawable/cardview_backgroud"
+        android:id="@+id/layout_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tv_class_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="@string/text_class_time"
+                    android:textColor="@color/word_color_999999"
+                    android:textSize="@dimen/two_level_word"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_clss_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/tv_class_time"
+                    android:text="XXX"
+                    android:textColor="@color/word_color_666666"
+                    android:textSize="@dimen/two_level_word"
+                    android:singleLine="true"
+                    android:ellipsize="end"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/tv_section"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="@string/text_class_section"
+                    android:textColor="@color/word_color_999999"
+                    android:textSize="@dimen/two_level_word"/>
+
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:id="@+id/tv_class_section"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/tv_section"
+                    android:text="XXX"
+                    android:textColor="@color/word_color_666666"
+                    android:textSize="@dimen/two_level_word"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tv_class_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="@string/text_class_name"
+                    android:textColor="@color/word_color_999999"
+                    android:textSize="@dimen/two_level_word"/>
+
+                <TextView
+                    android:id="@+id/tv_class_name2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/tv_class_name"
+                    android:text="XXX"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:textColor="@color/word_color_666666"
+                    android:textSize="@dimen/two_level_word"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/right_arrow_normal"/>
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

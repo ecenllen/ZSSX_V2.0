@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/wirte_ffffff">
+    <!-- 录入姓名多项 - 班级维度 -->
+    <include layout="@layout/include_class_adapter_item_normal"/>
+
+    <!--<RelativeLayout
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_dormitory_score"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="班级得分："
+            android:textSize="@dimen/two_level_word"/>
+        <TextView
+            android:id="@+id/tv_minus_sign"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:paddingLeft="2dp"
+            android:paddingRight="2dp"
+            android:textSize="@dimen/two_level_word"
+            android:visibility="gone"
+            android:layout_toRightOf="@+id/tv_dormitory_score"/>
+
+        <TextView
+            android:id="@+id/tv_dormitory_score_show"
+            android:layout_marginLeft="110dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="@dimen/two_level_word"/>
+        <TextView
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/string_score_name_show"
+            android:textSize="@dimen/two_level_word"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_dormitory_remark"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/string_dormitory_class_remark"
+            android:textSize="@dimen/two_level_word"/>
+        <EditText
+            android:id="@+id/tv_dormitory_class_remark"
+            android:layout_toRightOf="@+id/tv_dormitory_remark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_not_edit_selector"/>
+    </RelativeLayout>-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!-- 多项 -->
+        <include layout="@layout/layout_dormitory_enter_name_multiple_item" />
+    </ScrollView>
+</LinearLayout>

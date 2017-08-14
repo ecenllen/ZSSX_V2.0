@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_backlog"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/dp_14"
+    android:paddingLeft="@dimen/dp_10"
+    android:paddingRight="@dimen/dp_10"
+    android:paddingTop="@dimen/dp_14">
+
+    <com.gta.utils.view.CircleImageView
+        android:id="@+id/iv_avatar"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerVertical="true"
+        android:src="@drawable/oa_default_portrait" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_toRightOf="@+id/iv_avatar">
+
+        <TextView
+            android:id="@+id/tv_personInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:text="张三"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_16" />
+
+        <TextView
+            android:id="@+id/tv_position"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_22"
+            android:layout_marginRight="@dimen/dp_10"
+            android:layout_toLeftOf="@+id/tv_applyTime"
+            android:layout_toRightOf="@+id/tv_personInfo"
+            android:ellipsize="end"
+            android:lines="1"
+            android:text="教务"
+            android:textColor="@color/word_color_999999"
+            android:textSize="@dimen/sp_16" />
+
+        <TextView
+            android:id="@+id/tv_applyTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/tv_personInfo"
+            android:lines="1"
+            android:text="2016/10/26"
+            android:textColor="@color/word_color_999999"
+            android:textSize="@dimen/sp_14" />
+
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/tv_personInfo"
+            android:layout_marginRight="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_4"
+            android:layout_toLeftOf="@+id/tv_status"
+            android:text="11月11日请假申请"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_14" />
+
+        <TextView
+            android:id="@+id/tv_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/tv_applyTime"
+            android:layout_marginTop="@dimen/dp_4"
+            android:text="审批中"
+            android:textSize="@dimen/sp_14" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

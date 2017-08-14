@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--主页选项卡图片，选中-->
+    <string-array name="main_tab_drawable_select">
+        <item>@drawable/tab_home_sel</item>
+        <item>@drawable/tab_add_sel</item>
+        <item>@drawable/tab_user_sel</item>
+    </string-array>
+
+    <!--主页选项卡图片，未选中-->
+    <string-array name="main_tab_drawable_unselect">
+        <item>@drawable/tab_home_nor</item>
+        <item>@drawable/tab_add_nor</item>
+        <item>@drawable/tab_user_nor</item>
+    </string-array>
+
+    <string-array name="main_tab_text">
+        <item>@string/main_tab_home</item>
+        <item>@string/main_tab_add</item>
+        <item>@string/main_tab_my</item>
+    </string-array>
+
+    <!--巡课新增页面图标，选中-->
+    <!--<string-array name="add_page_drawable_select">-->
+        <!--<item>@drawable/log_register_sel</item>-->
+        <!--<item>@drawable/random_class_sel</item>-->
+        <!--<item>@drawable/plan_class_sel</item>-->
+        <!--<item>@drawable/ic_close_hover</item>-->
+    <!--</string-array>-->
+
+    <!--巡课新增页面图标，未选中-->
+    <!--<string-array name="add_page_drawable_unselect">-->
+        <!--<item>@drawable/log_register_nor</item>-->
+        <!--<item>@drawable/random_class_nor</item>-->
+        <!--<item>@drawable/plan_class_nor</item>-->
+        <!--<item>@drawable/ic_close</item>-->
+    <!--</string-array>-->
+
+    <string-array name="backlog_title_text">
+        <item>@string/backlog_title_undo</item>
+        <item>@string/backlog_title_finish</item>
+        <item>@string/backlog_title_mine</item>
+    </string-array>
+
+</resources>

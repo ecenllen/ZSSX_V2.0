@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="main_color">#00ad64</color>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="divide_line">#e4e4e4</color>
+    <color name="main_color_slight">#b6e2d1</color>
+    <color name="gray_slight">#efefef</color>
+    <color name="half_transparent">#20000000</color>
+    <color name="main_color_gray">#009657</color>
+    <color name="gray_999999">#999999</color>
+    <color name="gray_666666">#666666</color>
+    <color name="gray_dbdbdb">#dbdbdb</color>
+    <color name="black_999999">#222222</color>
+    <color name="gray_d7d7d7">#d7d7d7</color>
+    <color name="gray_dcdcdc">#dcdcdc</color>
+    <color name="wirte_ffffff">#ffffff</color>
+    <color name="purple_823fe8">#823fe8</color>
+    <color name="blue_4cbfed">#4cbfed</color>
+    <color name="gray_e6e6e6">#e6e6e6</color>
+    <color name="green_6dd2a8">#6dd2a8</color>
+    <color name="gray_4c4c4c">#4c4c4c</color>
+    <color name="white_alpha_16">#10ffffff</color>
+    <color name="white_alpha_240">#f0ffffff</color>
+    <color name="f48585">#f48585</color>
+    <color name="ffcbcb">#ffcbcb</color>
+    <color name="ff773d">#ff773d</color>
+    <!--课时统计-->
+    <color name="log_statistice_selected">#dcdcdc</color>
+
+    <color name="background_select">#88000000</color>
+
+    <color name="section_header_tv">#ff666666</color>
+    <color name="section_header_tv_bg">#ffE8EDEE</color>
+    <color name="account_input_bg_color">#33ffffff</color>
+    <color name="image_section_name_tv">#ff444444</color>
+    <color name="user_info_message_notice">#E35B5A</color>
+
+    <color name="red_logout">#d20000</color>
+    <color name="red_d80019">#d80019</color>
+    <color name="transparent">#00ffffff</color>
+    <color name="alpha_gray">#ff888888</color>
+
+    <!-- 内容显示相关字体颜色 -->
+    <color name="word_color_999999">#999999</color>
+    <color name="word_color_666666">#666666</color>
+    <color name="word_color_444444">#444444</color>
+    <color name="word_color_light_gray">#dcdcdc</color>
+    <color name="view_line_deep">#a9a9a9</color>
+    <color name="view_line">#dddddd</color>
+    <color name="delete_color">#d40000</color>
+    <color name="popup_window_color">#ececec</color>
+    <!--巡课模块-->
+    <color name="class_log_button_bg">#54bbff</color>
+    <color name="class_look_button_bg">#30c184</color>
+    <color name="asset_button_bg">#f4ad32</color>
+    <color name="ecf2ef">#ecf2ef</color>
+    <color name="f4f4f4">#f4f4f4</color>
+    <color name="daf4e9">#daf4e9</color>
+
+    <!-- 时间选择器 -->
+    <color name="year_unselect">#42bd41</color>
+    <color name="year_select">#0091ea</color>
+    <color name="month_unselect">#80d8ff</color>
+    <color name="month_select">#f36c60</color>
+    <color name="day_unselect">#ff9800</color>
+    <color name="day_select">#9575cd</color>
+    <color name="red_color">#ff6f6f</color>
+    <color name="blue_color">#85c0ff</color>
+    <color name="delete_red">#ff5035</color>
+
+    <!-- 默认字体颜色 -->
+    <color name="textColor_def">#333333</color>
+    <color name="textColor_def_bright">#666666</color>
+    <color name="textColor_gray">#999999</color>
+    <color name="textColor_cyan">#05c0ab</color>
+    <color name="background_color_gray">#c0f0f0</color>
+
+
+    <!--====================课表===================-->
+    <color name="schedule_open_top">#cdf2ee</color>
+    <color name="schedule_backgrouond_def">#ffffff</color>
+
+    <color name="black">#000000</color>
+    <color name="textColor_status_agree">#00ad64</color>
+    <color name="textColor_status_reject">#FF4833</color>
+
+    <!--宿舍评分-->
+    <color name="bg_dormitory_class_list_s">#5fd9a6</color>
+    <color name="button_save_s">#f8991d</color>
+    <color name="text_dormitory_score_s">#0e0e0e</color>
+    <color name="line_dormitory_list">#0e0e0e</color>
+    <color name="transparent_half">#80000000</color>
+    <color name="transparent_slight">#50000000</color>
+    <color name="edit_cannot_bg">#e4e4e4</color>
+</resources>

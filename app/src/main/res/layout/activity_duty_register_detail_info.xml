@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/include_toolbar"/>
+    <LinearLayout
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <include layout="@layout/duty_detaail_info_edit"
+            android:visibility="visible"/>
+        <include layout="@layout/duty_detail_info"
+            android:visibility="gone"/>
+    </LinearLayout>
+    <TextView
+        android:layout_below="@+id/toolbar"
+        android:id="@+id/tv_emptyHint"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="暂无数据"
+        android:gravity="center"
+        android:visibility="gone"/>
+</RelativeLayout>

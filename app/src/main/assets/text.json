@@ -1,0 +1,77 @@
+{
+  "Code": 0,
+  "Message": "success",
+  "Data": [
+    {
+      "ClassName": "3班",
+      "RegisterDataList": [
+        {
+          "WeekDate": 9,
+          "WeekNumber": "九",
+          "TimeSlot": "07月10日-07月16日",
+          "State": "0"
+        },
+        {
+          "WeekDate": 8,
+          "WeekNumber": "八",
+          "TimeSlot": "07月03日-07月09日",
+          "State": "-1"
+        },
+        {
+          "WeekDate": 7,
+          "WeekNumber": "七",
+          "TimeSlot": "06月26日-07月02日",
+          "State": "-1"
+        },
+        {
+          "WeekDate": 6,
+          "WeekNumber": "六",
+          "TimeSlot": "06月19日-06月25日",
+          "State": "-1"
+        },
+        {
+          "WeekDate": 5,
+          "WeekNumber": "五",
+          "TimeSlot": "06月12日-06月18日",
+          "State": "-1"
+        },
+        {
+          "WeekDate": 4,
+          "WeekNumber": "四",
+          "TimeSlot": "06月05日-06月11日",
+          "State": "-1"
+        },
+        {
+          "WeekDate": 3,
+          "WeekNumber": "三",
+          "TimeSlot": "05月29日-06月04日",
+          "State": "-1"
+        },
+        {
+          "WeekDate": 2,
+          "WeekNumber": "二",
+          "TimeSlot": "05月22日-05月28日",
+          "State": "-1"
+        },
+        {
+          "WeekDate": 2,
+          "WeekNumber": "二",
+          "TimeSlot": "07月24日-07月30日",
+          "State": "-1"
+        },
+        {
+          "WeekDate": 1,
+          "WeekNumber": "一",
+          "TimeSlot": "05月15日-05月21日",
+          "State": "-1"
+        },
+        {
+          "WeekDate": 1,
+          "WeekNumber": "一",
+          "TimeSlot": "07月17日-07月23日",
+          "State": "-1"
+        }
+      ]
+    }
+  ]
+}

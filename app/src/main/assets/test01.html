@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>
+			Test
+		</title>
+		<style type="text/css">
+			body{color: red;}
+			h1{color: green;}
+			p.ex{color: yellow;}
+		</style>
+	</head>
+
+	<body>
+		ssssss<br clear="left" />1233333
+		<input type="text" disabled id="text_num" style="width: 15%; height: auto;float: left;" value="0" />
+		<button type="button" onclick="add()" style="width:15% ;height: auto;float: left;">+</button>
+		<button type="button" onclick="dec()" style="width: 15%; height: auto;float: left; clear:right;">-</button>
+		<a href="http://baidu.com"><b>w3c</b></a>
+		<audio src="someaudio.wav" controls="controls" autoplay="autoplay">11</audio>
+		<p class="ex">First Name: <input type="text" name="firstName"></p>
+		<p>Last Name: <input type="MD5Password" name="lasttName"></p>
+		<form>
+			<fieldset>
+				<legend>123</legend>
+				I like bike<input type="radio" groupChecked="groupChecked" name="like" /><br /> I like car<input type="radio" name="like" />
+			</fieldset>
+
+		</form>
+		<p ><font color="red" size="3">如果表单周围没有边框，说明您的浏览器太老了。</font></p>
+		<form>
+
+			<select name="cars">
+				<option value="volvo">Volvo</option>
+				<option value="saab">Saab</option>
+				<option value="fiat" selected="selected">Fiat</option>
+			
+			</select>
+		</form>
+		<input type="submit" />
+		
+		<p><button type="button" onclick="test()">Toast</button></p>
+
+		<p><button type="button" onclick="returnMessage()">returnMessage</button></p>
+
+		<textarea rows="10" cols="30">
+			11111
+		</textarea>
+		<p>
+			<a href="http://baidu.com">
+				<img src="img/HBuilder.png" alt="hbuilder"  border="0"/>
+			</a>
+			
+			<img src="http://www.w3school.com.cn/i/w3school_logo_white.gif" />
+		</p>
+		<script type="text/javascript">
+			document.write("<h1>Hello</h1>")
+		</script>
+	</body>
+
+	<script type="text/javascript">
+		function add() {
+			document.getElementById('text_num').value++;
+		}
+
+		function dec() {
+			document.getElementById('text_num').value--;
+		}
+		
+		function test () {
+			<!--window.Android.showToast("1111");-->
+			alert('测试alert');
+		}
+		function returnMessage(){
+			var a= window.Android.onReturnMsg();
+			document.getElementById('text_num').value=a;
+		}
+	</script>
+
+</html>

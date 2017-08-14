@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--<ProgressBar
+        android:id="@+id/pb"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerInParent="true" />-->
+
+    <com.gta.utils.view.CircleImageView
+        android:id="@+id/cv_circle"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:src="@color/half_transparent" />
+
+    <com.gta.zssx.fun.personalcenter.view.widget.Loading
+        android:id="@+id/pb"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_centerInParent="true"
+        app:gBackgroundLineSize="4dp"
+        app:gForegroundLineSize="4dp" />
+
+    <TextView
+        android:id="@+id/tv_load_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pb"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="8dp"
+        android:text="@string/loading"
+        android:textColor="@color/textColor_def"
+        android:textSize="16sp" />
+
+</RelativeLayout>

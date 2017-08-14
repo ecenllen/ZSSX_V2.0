@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_oa_search"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.gta.zssx.mobileOA.view.page.SearchActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_search"
+        android:layout_width="match_parent"
+        android:layout_height="@android:dimen/app_icon_size"
+        android:background="@color/gray_e6e6e6"
+        android:paddingBottom="7dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="7dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/tv_cancel"
+            android:background="@drawable/circleconer_button_white"
+            android:orientation="horizontal">
+
+            <com.gta.zssx.pub.widget.ClearEditText
+                android:id="@+id/et_search"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:background="@null"
+                android:drawableLeft="@drawable/ic_magnifier"
+                android:drawablePadding="12dp"
+                android:drawableRight="@drawable/ic_close_search"
+                android:hint="搜索"
+                android:lines="1"
+                android:paddingRight="15dp"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="取消"
+            android:textColor="@color/main_color" />
+    </RelativeLayout>
+
+    <com.gta.zssx.pub.hfrecyclerview.HFRecyclerView
+        android:id="@+id/rv_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_search" />
+
+    <TextView
+        android:id="@+id/tv_emptyHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textSize="@dimen/sp_16"
+        android:text="无搜索结果"
+        android:visibility="gone"/>
+
+</RelativeLayout>

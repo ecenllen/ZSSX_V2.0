@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="@drawable/schedule_top_divide_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/schedule_week_bg"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/weekName"
+                android:text="日"
+                android:textColor="@color/main_color" />
+
+            <TextView
+                style="@style/weekName"
+                android:text="一" />
+
+            <TextView
+                style="@style/weekName"
+                android:text="二" />
+
+            <TextView
+                style="@style/weekName"
+                android:text="三" />
+
+            <TextView
+                style="@style/weekName"
+                android:text="四" />
+
+            <TextView
+                style="@style/weekName"
+                android:text="五" />
+
+            <TextView
+                style="@style/weekName"
+                android:text="六"
+                android:textColor="@color/main_color" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/schedule_calendar_divide_line" />
+        <TextView
+            android:id="@+id/schedule_month_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="2016年11月"
+            android:paddingTop="2dp"
+            android:paddingLeft="10dp"
+            android:paddingBottom="2dp"
+            android:textColor="@color/red_logout"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/schedule_calendar_divide_line" />
+        <ViewFlipper
+            android:id="@+id/schedule_flipper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#C6C6C6"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="26dp"
+            android:background="@drawable/schedule_center_tip_bg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/schedule_c1"
+                android:drawablePadding="4dp"
+                android:gravity="center"
+                android:text="以前还没未完成"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/schedule_c3"
+                android:drawablePadding="4dp"
+                android:gravity="center"
+                android:text="将来还没未完成"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/schedule_c2"
+                android:drawablePadding="4dp"
+                android:gravity="left"
+                android:text="已完成"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <com.gta.zssx.mobileOA.view.adapter.ui.SwipeListView
+                android:id="@+id/schedule_listview1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="invisible">
+            </com.gta.zssx.mobileOA.view.adapter.ui.SwipeListView>
+
+            <com.baoyz.swipemenulistview.SwipeMenuListView
+                android:id="@+id/schedule_listview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+            </com.baoyz.swipemenulistview.SwipeMenuListView>
+        </LinearLayout>
+    </LinearLayout>
+
+
+        <TextView
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:id="@+id/schedule_add_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_schedule_add"
+            android:gravity="center"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:textColor="@color/white" />
+
+</RelativeLayout>

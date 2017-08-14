@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_item_press_bg"
+                android:minHeight="48dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="10dp">
+
+    <CheckBox
+        android:id="@+id/cb_dock_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:background="@android:color/transparent"
+        android:button="@drawable/checkbox_selector"
+        android:clickable="false"
+        />
+
+    <TextView
+        android:singleLine="false"
+        android:maxEms="15"
+        android:id="@+id/tv_dock_score_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="12.5dp"
+        android:layout_toRightOf="@+id/cb_dock_score"
+        android:text="学生能够睡觉"
+        android:textColor="@color/gray_999999"
+        android:textSize="14sp"
+        />
+
+    <RelativeLayout
+        android:id="@+id/rl_dock_score_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_dock_score_add"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="+"
+            android:textSize="20sp"
+            />
+
+        <EditText
+            android:id="@+id/et_dock_score"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@id/tv_dock_score_add"
+            android:background="@drawable/shape_edittext_rect_bg"
+            android:gravity="center"
+            android:inputType="number"
+            android:textColor="@color/gray_999999"/>
+
+        <TextView
+            android:id="@+id/tv_dock_score_reduce"
+            android:layout_width="25dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@id/et_dock_score"
+            android:gravity="center"
+            android:text="-"
+            android:textSize="25sp"
+            />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="-"
+            android:textSize="20sp"
+            />
+
+        <EditText
+            android:id="@+id/et_score"
+            android:layout_width="35dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/shape_text_view_enable_bg"
+            android:gravity="center"
+            android:inputType="number"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:textColor="@color/black_999999"
+            android:textSize="16sp"
+            />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="25dp"
+        android:background="@color/divide_line"
+        />
+</RelativeLayout>

@@ -1,0 +1,76 @@
+{
+  "TotalScore": "90",
+  "ScoreOptionsList": [
+    {
+      "DeductItemName": "课堂效果",
+      "DeductItemID": 123,
+      "Options": [
+        {
+          "OptionTitle": "上课打学生（-5分）",
+          "OptionScore": "5",
+          "OptionId": 111,
+          "CheckState": false
+        },
+        {
+          "OptionTitle": "上课打学生（-5分）",
+          "OptionScore": "5",
+          "OptionId": 111,
+          "CheckState": false
+        },
+        {
+          "OptionTitle": "上课打学生（-5分）",
+          "OptionScore": "5",
+          "OptionId": 111,
+          "CheckState": false
+        }
+      ]
+    },
+    {
+      "DeductItemName": "课堂效果",
+      "Options": [
+        {
+          "OptionTitle": "上课打学生（-5分）",
+          "OptionScore": "5",
+          "OptionId": 111,
+          "CheckState": false
+        },
+        {
+          "OptionTitle": "上课打学生（-5分）",
+          "OptionScore": "5",
+          "OptionId": 111,
+          "CheckState": false
+        },
+        {
+          "OptionTitle": "上课打学生（-5分）",
+          "OptionScore": "5",
+          "OptionId": 111,
+          "CheckState": false
+        }
+      ]
+    },
+    {
+      "DeductItemName": "课堂效果",
+      "Options": [
+        {
+          "OptionTitle": "上课打学生（-5分）",
+          "OptionScore": "5",
+          "OptionId": 111,
+          "CheckState": false
+        },
+        {
+          "OptionTitle": "上课打学生（-5分）",
+          "OptionScore": "5",
+          "OptionId": 111,
+          "CheckState": false
+        },
+        {
+          "OptionTitle": "上课打学生（-5分）",
+          "OptionScore": "5",
+          "OptionId": 111,
+          "CheckState": false
+        }
+      ]
+    }
+  ]
+}
+

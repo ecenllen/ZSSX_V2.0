@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_subtask"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/dp_10">
+
+    <TextView
+        android:id="@+id/tv_task"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="机场接机"
+        android:textSize="@dimen/sp_16" />
+
+    <TextView
+        android:id="@+id/tv_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="进行中"
+        android:textSize="@dimen/sp_16" />
+    
+    <TextView
+        android:id="@+id/tv_personHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="负责人："
+        android:layout_below="@+id/tv_task"
+        android:layout_marginTop="@dimen/dp_4"/>
+    <TextView
+        android:id="@+id/tv_person"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="李某某（负责部门）"
+        android:layout_alignTop="@+id/tv_personHint"
+        android:layout_toRightOf="@+id/tv_personHint"/>
+
+    <TextView
+        android:id="@+id/tv_timeHint"
+        android:layout_below="@+id/tv_personHint"
+        android:layout_marginTop="@dimen/dp_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="计划完成时间："/>
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2016-11-05 09:25"
+        android:layout_alignTop="@+id/tv_timeHint"
+        android:layout_toRightOf="@+id/tv_timeHint"/>
+
+
+</RelativeLayout>

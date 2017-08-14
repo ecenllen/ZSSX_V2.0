@@ -1,0 +1,46 @@
+{
+  "ClassID": 1111,
+  "Json": {
+    "WeekDate": 5,
+    "Date": "2017-05-06",
+    "Section": 8,
+    "CourseName": "数学",
+    "TeacherId": "44444",
+    "Score": "90",
+    "SaveScoreOptionsList": [
+      {
+        "DeductItemID": 888,
+        "SaveOptionsList": [
+          {
+            "OptionId": 5
+          },
+          {
+            "OptionId": 5
+          }
+        ]
+      },
+      {
+        "DeductItemID": 888,
+        "SaveOptionsList": [
+          {
+            "OptionId": 5
+          },
+          {
+            "OptionId": 5
+          }
+        ]
+      },
+      {
+        "DeductItemID": 888,
+        "SaveOptionsList": [
+          {
+            "OptionId": 5
+          },
+          {
+            "OptionId": 5
+          }
+        ]
+      }
+    ]
+  }
+}

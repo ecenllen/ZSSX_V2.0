@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="2dp"
+        android:paddingTop="2dp">
+
+        <RelativeLayout
+            android:id="@+id/rl_class_score"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true">
+
+            <TextView
+                android:id="@+id/tv_dormitory_class_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/dormitory_option_item_name"
+                android:layout_centerVertical="true"
+                android:text="@string/string_dormitory_class_score"
+                android:textColor="@color/main_color" />
+
+            <TextView
+                android:id="@+id/tv_minus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/main_color"
+                android:paddingRight="4dp"
+                android:text="@string/string_minus" />
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/et_class_score"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="4dp"
+            android:paddingLeft="4dp"
+            android:paddingBottom="4dp"
+            android:layout_centerVertical="true"
+            android:inputType="numberDecimal"
+            android:layout_toRightOf="@+id/rl_class_score"
+            android:layout_toLeftOf="@+id/tv_score"
+            android:background="@drawable/edittext_not_edit_selector"
+            android:hint="" />
+
+        <TextView
+            android:id="@+id/tv_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            style="@style/dormitory_option_item_name"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/main_color"
+            android:layout_centerVertical="true"
+            android:text="@string/string_score_name_show" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_e6e6e6" />
+
+    <RelativeLayout
+        android:id="@+id/rl_remark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="2dp"
+        android:paddingTop="2dp">
+
+        <TextView
+            android:id="@+id/tv_dormitory_class_remark"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            style="@style/dormitory_option_item_name"
+            android:text="@string/string_dormitory_class_remark"
+            android:textColor="@color/textColor_def_bright" />
+
+        <EditText
+            android:id="@+id/et_class_remark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="4dp"
+            android:paddingLeft="4dp"
+            android:paddingBottom="4dp"
+            android:layout_centerVertical="true"
+            android:maxLength="50"
+            android:layout_toRightOf="@+id/tv_dormitory_class_remark"
+            android:layout_toLeftOf="@+id/tv_score2"
+            android:background="@drawable/edittext_not_edit_selector"
+            android:hint="" />
+
+        <TextView
+            android:id="@+id/tv_score2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_alignParentRight="true"
+            android:visibility="invisible"
+            style="@style/dormitory_option_item_name"
+            android:layout_centerVertical="true"
+            android:text="@string/string_score_name_show" />
+    </RelativeLayout>
+
+</LinearLayout>

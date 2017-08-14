@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:id="@+id/rl_meeting"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dp_10"
+    android:orientation="vertical"
+    app:cardCornerRadius="1dp"
+    app:contentPadding="@dimen/dp_10"
+    card_view:cardPreventCornerOverlap="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="流程结束"
+            android:textColor="@color/textColor_def"
+            android:textSize="@dimen/sp_16"
+            android:layout_alignParentTop="true" />
+
+
+        <View
+            android:id="@+id/divider1"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/tv_content"
+            android:layout_marginTop="@dimen/dp_6"
+            android:background="@color/view_line" />
+
+
+        <TextView
+            android:id="@+id/tv_completeTimeHint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/divider1"
+            android:layout_marginTop="@dimen/dp_6"
+            android:text="办理日期："
+            android:textColor="@color/gray_999999"
+            android:textSize="@dimen/sp_16" />
+
+        <TextView
+            android:id="@+id/tv_completeTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/divider1"
+            android:layout_marginTop="@dimen/dp_6"
+            android:layout_toRightOf="@+id/tv_completeTimeHint"
+            android:text="2016-12-21 19:00:00"
+            android:textColor="@color/textColor_def"
+            android:textSize="@dimen/sp_16" />
+
+        <TextView
+            android:id="@+id/tv_approverHint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tv_content"
+            android:layout_below="@+id/tv_completeTimeHint"
+            android:layout_marginTop="@dimen/dp_6"
+            android:text="审批人："
+            android:textColor="@color/gray_999999"
+            android:textSize="@dimen/sp_16" />
+
+        <TextView
+            android:id="@+id/tv_approver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_completeTimeHint"
+            android:layout_marginTop="@dimen/dp_6"
+            android:layout_toRightOf="@+id/tv_approverHint"
+            android:text="黄建星"
+            android:textColor="@color/textColor_def"
+            android:textSize="@dimen/sp_16" />
+
+        <TextView
+            android:id="@+id/tv_statusHint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_approverHint"
+            android:layout_marginTop="@dimen/dp_6"
+            android:text="结果："
+            android:textColor="@color/gray_999999"
+            android:textSize="@dimen/sp_16" />
+
+        <TextView
+            android:id="@+id/tv_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/tv_statusHint"
+            android:layout_toRightOf="@+id/tv_statusHint"
+            android:text="结束"
+            android:textColor="@color/textColor_def"
+            android:textSize="@dimen/sp_16" />
+
+        <TextView
+            android:id="@+id/tv_resultHint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_statusHint"
+            android:layout_marginTop="@dimen/dp_6"
+            android:text="审批结果："
+            android:textColor="@color/gray_999999"
+            android:textSize="@dimen/sp_16" />
+
+        <TextView
+            android:id="@+id/tv_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/tv_resultHint"
+            android:layout_toRightOf="@+id/tv_resultHint"
+            android:text="通过"
+            android:textColor="@color/textColor_def"
+            android:textSize="@dimen/sp_16" />
+
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

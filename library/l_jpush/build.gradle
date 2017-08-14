@@ -1,0 +1,39 @@
+apply plugin: 'com.android.library'
+
+android {
+    def app = rootProject.ext.android
+    compileSdkVersion app.compileSdkVersion
+    buildToolsVersion app.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion app.minSdkVersion
+        targetSdkVersion app.targetSdkVersion
+        versionCode app.versionCode
+        versionName app.versionName
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    buildToolsVersion '25.0.0'
+}
+
+dependencies {
+    def app = rootProject.ext.android
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile "com.android.support:appcompat-v7:$app.supportVersion"
+    compile files('libs/jpush-android-2.1.7.jar')
+}
+
+/**
+ *剔除多余的R文件及自动生成的BuildConfig类
+ * */
+//task androidReleaseJar(type: Jar, dependsOn: assembleRelease) {
+//    from "$buildDir/intermediates/classes/release/"
+//    exclude '**/BuildConfig.class'
+//    exclude '**/R.class'
+//    exclude '**/R$*.class'
+//}
+

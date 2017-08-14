@@ -1,0 +1,602 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          package="com.gta.zssx">
+
+    <!-- 基本权限 -->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    //scan
+    <uses-permission android:name="android.permission.FLASHLIGHT"/>
+
+    <uses-feature android:name="android.hardware.camera"/>
+    <!-- 极光推送 -->
+    <permission
+        android:name="${applicationId}.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature"/>
+
+    <uses-permission android:name="${applicationId}.permission.JPUSH_MESSAGE"/>
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+
+    <!-- shareSDK -->
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+
+    <application
+        android:name=".ZSSXApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/app_icon"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- Required SDK 核心功能 -->
+        <!-- option since 2.0.5 可配置PushService，DaemonService,PushReceiver,AlarmReceiver的android:process参数 将JPush相关组件设置为一个独立进程 -->
+        <!-- 如：android:process=":remote" -->
+        <service
+            android:name="cn.jpush.android.service.PushService"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTER"/>
+                <action android:name="cn.jpush.android.intent.REPORT"/>
+                <action android:name="cn.jpush.android.intent.PushService"/>
+                <action android:name="cn.jpush.android.intent.PUSH_TIME"/>
+            </intent-filter>
+        </service>
+
+        <!-- Required -->
+        <receiver
+            android:name="cn.jpush.android.service.PushReceiver"
+            android:enabled="true">
+            <intent-filter android:priority="1000">
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY"/>
+
+                <category android:name="${applicationId}"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT"/>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+            <!-- Optional -->
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED"/>
+                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+
+                <data android:scheme="package"/>
+            </intent-filter>
+        </receiver>
+
+        <!-- Required SDK核心功能 -->
+        <activity
+            android:name="cn.jpush.android.ui.PushActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.ui.PushActivity"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="${applicationId}"/>
+            </intent-filter>
+        </activity>
+        <!-- Required SDK核心功能 -->
+        <service
+            android:name="cn.jpush.android.service.DownloadService"
+            android:enabled="true"
+            android:exported="false"/>
+        <!-- Required SDK核心功能 -->
+        <receiver android:name="cn.jpush.android.service.AlarmReceiver"/>
+
+        <!-- User defined. 用户自定义的广播接收器 -->
+        <receiver
+            android:name="com.gta.utils.thirdParty.jPush.JpushReceiver"
+            android:enabled="true">
+            <intent-filter>
+
+                <!-- Required 用户注册SDK的intent -->
+                <action android:name="cn.jpush.android.intent.REGISTRATION"/>
+                <!-- Required 用户接收SDK消息的intent -->
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED"/>
+                <!-- Required 用户接收SDK通知栏信息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED"/>
+                <!-- Required 用户打开自定义通知栏的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED"/>
+                <!-- Optional 用户接受Rich Push Javascript 回调函数的intent -->
+                <action android:name="cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK"/>
+                <!-- 接收网络变化 连接/断开 since 1.6.3 -->
+                <action android:name="cn.jpush.android.intent.CONNECTION"/>
+
+                <category android:name="${applicationId}"/>
+            </intent-filter>
+        </receiver>
+
+        <!-- Required. AppKey copied from Portal -->
+        <meta-data
+            android:name="JPUSH_APPKEY"
+            android:value="@string/JpushKey"/>
+        //
+        <service android:name=".pub.service.GrayService"/>
+        <service android:name=".pub.service.GrayInnerService"/>
+
+        <!-- 微信分享 -->
+        <!-- 微信分享回调 -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+
+        <!-- QQ客户端完成QQ空间的分享 -->
+        <activity
+            android:name="com.mob.tools.MobUIShell"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <data android:scheme="tencent1105710745"/>
+
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".fun.personalcenter.view.page.LoginActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".StartActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <!--课堂日志-->
+        <activity
+            android:name=".fun.coursedaily.registercourse.view.pageV2.MultiselectTeacherActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".fun.coursedaily.registercourse.view.pageV2.MultiselectCourseActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".fun.coursedaily.registercourse.view.pageV2.CourseSignWithAttendanceStatusActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity
+            android:name=".fun.coursedaily.registercourse.view.pageV2.StudentSearchActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity
+            android:name=".fun.coursedaily.registercourse.view.base.RegisterCourseActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".fun.coursedaily.registercourse.view.pageV2.ClassSearchActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".fun.personalcenter.view.page.PersonCenterActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".fun.personalcenter.deprecated.ImageGalleryActivityV2"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="图片预览"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Dialog.NoTitle.Translucent"/>
+        <activity
+            android:name=".fun.personalcenter.view.page.ImageGalleryActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="图片预览"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Dialog.NoTitle.Translucent"/>
+
+        <activity
+            android:name=".fun.coursedaily.registerrecord.view.page.AlreadyRegisteredRecordActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".fun.coursedaily.registerrecord.view.page.DetailRegisteredRecordActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".fun.coursedaily.registerrecord.view.page.AlreadyRegisteredRecordPeriodOfTimeActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".fun.coursedaily.registercourse.view.pageV2.CourseDailyActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".fun.coursedaily.registercourse.view.pageV2.CourseDetailActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".fun.coursedaily.registercourse.view.pageV2.ClassLogStatisticeActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".fun.coursedaily.registercourse.view.pageV2.SectionChooseActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".fun.coursedaily.registercourse.view.pageV2.StudentListActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".fun.coursedaily.registercourse.view.pageV2.CourseSignActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".fun.coursedaily.registercourse.view.pageV2.ClassChooseActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".fun.coursedaily.registercourse.view.pageV2.TestMultiPageActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".patrolclass.view.page.AddClassChooseActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".patrolclass.view.page.PatrolRegisterActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"/>
+        <activity
+            android:name=".patrolclass.view.page.DockScoreActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity
+            android:name=".patrolclass.view.page.ChooseSectionsActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".fun.assetmanagement.zxing.activity.CaptureActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity
+            android:name=".main.HomePageActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".patrolclass.popup.AddPageActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity
+            android:name=".patrolclass.view.page.PatrolClassActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".patrolclass.view.page.PatrolClassSelActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".patrolclass.view.page.PlanProtalResultActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".patrolclass.view.page.SeePointsListsActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".patrolclass.view.page.HistoryTimeActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".patrolclass.view.page.SearchResultActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".patrolclass.view.page.ChooseTeacherActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity
+            android:name=".patrolclass.view.page.ChooseTeacherSearchActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".patrolclass.view.page.PlanClassSearchActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+
+        <!--<activity
+            android:name=".patrolclass.view.page.PatrolRegisterActivityNew"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"/>
+        <activity
+            android:name=".patrolclass.view.page.DockScoreNewActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"/>-->
+        <activity
+            android:name=".patrolclass.view.page.PatrolChooseSectionActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"/>
+
+        <!--资产管理-->
+        <activity android:name=".fun.coursedaily.registercourse.view.pageV2.TestWebViewActivity"/>
+        <!--资产首页-->
+        <activity
+            android:name=".fun.assetmanagement.view.page.AssetManagementActivity"
+            android:screenOrientation="portrait"/>
+        <!--资产详情界面-->
+        <activity
+            android:name=".fun.assetmanagement.view.page.AssetWebViewShowActivity"
+            android:screenOrientation="portrait"/>
+        <!--资产选择资产、地点-->
+        <activity
+            android:name=".fun.assetmanagement.view.page.AssetWebViewChooseActivity"
+            android:screenOrientation="portrait"/>
+        <!--资产审批详情页-->
+
+
+        <!-- 移动OA -->
+        <activity
+            android:name=".mobileOA.OAMainActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".mobileOA.view.page.SchedulePlanActivity"
+            android:screenOrientation="portrait"/>
+
+        <!-- 调代课 -->
+        <activity
+            android:name=".fun.adjustCourse.deprecated.view.AdjustMainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".fun.adjustCourse.deprecated.view.CourseApplyActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity
+            android:name=".fun.adjustCourse.view.page.ScheduleSearchActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity
+            android:name=".fun.adjustCourse.view.page.CourseScheduleActivity"
+            android:configChanges="keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity
+            android:name=".fun.adjustCourse.view.page.DateChooseActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".fun.adjustCourse.view.page.TeacherRecommendActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".fun.adjustCourse.view.page.ChooseTeacherActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".fun.adjustCourse.view.page.ApplySuccessActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".fun.adjustCourse.deprecated.view.ApplyDetailActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity
+            android:name=".fun.adjustCourse.view.page.ChooseClassActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".fun.adjustCourse.view.page.AllMessageActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".fun.adjustCourse.view.page.ChooseTeacherSearchActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateVisible"/>
+        <activity
+            android:name=".fun.adjustCourse.view.page.AdjustClassSearchActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateVisible"/>
+        <activity
+            android:name=".fun.adjustCourse.view.page.v2.AdjustMvpMainActivityV2"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".fun.adjustCourse.view.page.v2.ClassScheduleActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".fun.adjustCourse.view.page.v2.CourseApplyActivityV2"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden"/>
+
+        <activity
+            android:name=".fun.adjustCourse.view.page.v2.DetailActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden"/>
+
+        <!--班级动态-->
+        <activity
+            android:name=".fun.classdynamics.view.page.CDMainCommonActivity"
+            android:screenOrientation="portrait"/>
+
+        <!-- 移动OA -->
+        <!-- 任务Activity -->
+        <activity
+            android:name=".mobileOA.view.page.TaskMainActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 任务详情 -->
+        <activity
+            android:name=".mobileOA.view.page.TaskDetailActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 搜索 -->
+        <activity
+            android:name=".mobileOA.view.page.SearchActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 会议 -->
+        <activity
+            android:name=".mobileOA.view.page.MeetingMainActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 会议通知 -->
+        <activity
+            android:name=".mobileOA.view.page.MeetingNoticeActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 会议纪要 -->
+        <activity
+            android:name=".mobileOA.view.page.MeetingSummaryActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 待办/已办 -->
+        <activity
+            android:name=".mobileOA.view.page.BacklogMainActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 待办详情 -->
+        <activity
+            android:name=".mobileOA.view.page.BacklogDetailActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+        <!-- 附件列表 -->
+        <activity
+            android:name=".mobileOA.view.page.AttachmentListActivity"
+            android:screenOrientation="portrait"/>
+        <!--日程-->
+        <activity
+            android:name=".mobileOA.view.page.ScheduleMainActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".mobileOA.view.page.NewScheduleActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".mobileOA.view.page.ScheduleRemindSelectActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".mobileOA.view.page.ScheduleWeeklyActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 事务提醒 -->
+        <activity
+            android:name=".mobileOA.view.page.EventNoticeActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 公文公告 -->
+        <activity
+            android:name=".mobileOA.view.page.OfficialNoticeMainActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".mobileOA.view.page.OfficialNoticeDetailActivity"
+            android:screenOrientation="portrait"/>
+
+        <!-- 值班 -->
+        <activity
+            android:name=".mobileOA.view.page.DutyNoticeActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".mobileOA.view.page.ChangeShiftDetailActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".mobileOA.view.page.DutyRegisterOrCheckActivity"
+            android:screenOrientation="portrait"/> <!-- 登记 -->
+
+        <activity
+            android:name=".mobileOA.view.page.DutyCheckAttendanceActivity"
+            android:screenOrientation="portrait"/> <!-- 检查 -->
+
+        <activity
+            android:name=".mobileOA.view.page.DutyTableInfoActivity"
+            android:screenOrientation="portrait"/> <!-- 值班表 -->
+
+        <activity
+            android:name=".mobileOA.view.page.DutyDateSelectActivity"
+            android:screenOrientation="portrait"/> <!-- 日期选择 -->
+
+        <activity
+            android:name=".mobileOA.view.page.DutyRegisterDetialInfoActivity"
+            android:screenOrientation="portrait"/> <!-- 登记详细信息 -->
+
+        <activity
+            android:name=".mobileOA.view.page.AttachmentDetailActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".mobileOA.view.page.TaskArrangeActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".mobileOA.view.page.ApplyActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".mobileOA.view.page.ChooseTeacherOrDeptActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".mobileOA.view.page.ApprovalHistoryActivity"/>
+        <!-- 选择会议、人,WebView 界面 -->
+        <activity
+            android:name=".mobileOA.view.page.WebViewChooseActivity"
+            android:screenOrientation="portrait"/>
+
+        <!-- 选择签章界面-->
+        <activity
+            android:name=".mobileOA.view.page.ChooseSealActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+
+        <!--宿舍-->
+        <activity
+            android:name=".dormitory.view.page.DormitoryMainActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+        <!--新增录入-->
+        <activity
+            android:name=".dormitory.view.page.DormitoryNewRankingActivity"
+            android:screenOrientation="portrait"
+            />
+        <!-- 指标项选择 -->
+        <activity
+            android:name=".dormitory.view.page.DormitorySelectItemActivity"
+            android:screenOrientation="portrait"
+            />
+        <!--  指标项搜索 -->
+        <activity
+            android:name=".dormitory.view.page.DormitoryItemSearchActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysVisible"/>
+        <!-- 宿舍楼专业部选择 -->
+
+        <activity
+            android:name=".dormitory.view.page.DormitorySelectLevelActivity"
+            android:windowSoftInputMode="stateHidden|adjustPan"
+            android:screenOrientation="portrait"/>
+        />
+        <!--宿舍列表/班级列表-->
+        <activity
+            android:name=".dormitory.view.page.DormitoryListActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+        <!--评分录入-有选项设置-->
+        <activity
+            android:name=".dormitory.view.page.DormitoryOrClassIndexPointActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <!--评分录入-宿舍单项-->
+        <!--  <activity
+            android:name=".dormitory.view.page.DormitoryEnterNameMultipleItemActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+-->
+        <!--课堂教学反馈-->
+        <activity
+            android:name=".fun.classroomFeedback.view.page.ClassroomFeedbackActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".fun.classroomFeedback.view.page.RegisterActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity
+            android:name=".fun.classroomFeedback.view.page.RegisterDetailsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity
+            android:name=".fun.classroomFeedback.view.page.CourseSearchActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity
+            android:name=".fun.classroomFeedback.view.page.ChangedTeacherActivity"
+            android:screenOrientation="portrait"/>
+    </application>
+
+</manifest>

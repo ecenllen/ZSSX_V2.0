@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ccffd1">
+    <!-- 录入姓名单项,宿舍维度和班级维度共用 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:text="@string/string_select_subtraction_student"
+        />
+    <com.gta.zssx.pub.widget.FixedScrollRecyclerView
+        android:id="@+id/rv_single_item_student"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never">
+
+    </com.gta.zssx.pub.widget.FixedScrollRecyclerView>
+
+    <!--宿舍维度才用显示这个View-->
+    <com.gta.zssx.pub.widget.FixedScrollRecyclerView
+        android:id="@+id/rv_single_item_class"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never"
+        android:visibility="gone">
+
+    </com.gta.zssx.pub.widget.FixedScrollRecyclerView>
+
+</LinearLayout>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="ZSSX.TextAppearance" parent="Base.TextAppearance.AppCompat">
+
+
+    </style>
+
+    <!--///////////////////////////////////
+///////   字体大小
+////////////////////////////////////-->
+    <dimen name="text_size_s11">11sp</dimen>
+    <dimen name="text_size_s12">12sp</dimen>
+    <dimen name="text_size_s13">13sp</dimen>
+    <dimen name="text_size_s14">14sp</dimen>
+    <dimen name="text_size_s15">15sp</dimen>
+    <dimen name="text_size_s16">16sp</dimen>
+    <dimen name="text_size_s18">18sp</dimen>
+    <dimen name="text_size_s19">19sp</dimen>
+    <dimen name="text_size_s20">20sp</dimen>
+    <dimen name="text_size_s21">21sp</dimen>
+    <dimen name="text_size_s22">22sp</dimen>
+    <dimen name="text_size_s24">24sp</dimen>
+    <dimen name="text_size_b30">30sp</dimen>
+
+
+    <dimen name="section_name_tv">16sp</dimen>
+    <dimen name="section_header_tv">13sp</dimen>
+
+    <!--颜色值-->
+    <color name="black_222222">#222222</color>
+    <color name="black_323232">#323232</color>
+    <color name="black_333333">#333333</color>
+    <color name="yellow_ff9501">#ff9501</color>
+    <color name="orange_ff9204">#ff9204</color>
+    <color name="gray_f3f5f7">#f3f5f7</color>
+    <color name="red_ff0000">#ff0000</color>
+    <color name="gray_b3b3b3">#b3b3b3</color>
+    <color name="gray_d3d3d3">#d3d3d3</color>
+
+    <style name="ZSSX.TextAppearance.Rightbutton">
+        <item name="android:textSize">@dimen/text_size_s18</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="ZSSX.TextAppearance.Title">
+        <item name="android:textSize">@dimen/text_size_s20</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="AdjustCourse_333333_s16_Style">
+        <item name="android:textColor">@color/black_333333</item>
+        <item name="android:textSize">@dimen/text_size_s16</item>
+    </style>
+
+    <style name="AdjustCourse_666666_s16_Style">
+        <item name="android:textColor">@color/gray_666666</item>
+        <item name="android:textSize">@dimen/text_size_s16</item>
+    </style>
+
+    <style name="AdjustCourse_666666_s15_Style">
+        <item name="android:textColor">@color/gray_666666</item>
+        <item name="android:textSize">@dimen/text_size_s15</item>
+    </style>
+
+    <style name="AdjustCourse_333333_s15_Style">
+        <item name="android:textColor">@color/black_333333</item>
+        <item name="android:textSize">@dimen/text_size_s15</item>
+    </style>
+
+    <style name="AdjustCourse_999999_s14_Style">
+        <item name="android:textColor">@color/gray_999999</item>
+        <item name="android:textSize">@dimen/text_size_s14</item>
+    </style>
+</resources>

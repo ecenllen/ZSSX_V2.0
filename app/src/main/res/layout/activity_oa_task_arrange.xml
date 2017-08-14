@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_oa_task_arrange"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.gta.zssx.mobileOA.view.page.TaskArrangeActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/main_color"
+        app:navigationIcon="@drawable/ic_left_arrow_white">
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/ZSSX.TextAppearance.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="任务安排" />
+
+        <TextView
+            android:id="@+id/tv_finish"
+            style="@style/ZSSX.TextAppearance.Rightbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginRight="10dp"
+            android:text="完成" />
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_taskArranges"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                app:layoutManager="LinearLayoutManager" />
+
+            <RelativeLayout
+                android:id="@+id/rl_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rv_taskArranges"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp_14">
+
+                <ImageView
+                    android:id="@+id/iv_add"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ec_evaluation_ic_add_to" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_toRightOf="@+id/iv_add"
+                    android:text="添加任务" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_height="wrap_content"
+        android:minHeight="50dp"
+        android:layout_width="match_parent"
+        >
+
+        <TextView
+            android:layout_marginRight="50dp"
+            android:id="@+id/tv_score_title_t"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="5dp"
+            android:text="教师分"
+            android:textColor="@color/gray_999999"
+            android:textSize="16sp"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@color/divide_line"
+            android:id="@+id/view2"/>
+
+        <EditText
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:id="@+id/tv_score_title_teacherScore"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:background="@drawable/shape_edittext_none_bg"
+            android:inputType="number"
+            android:text=""
+            android:layout_alignParentRight="true"
+            android:textColor="@color/gray_666666"
+            android:textSize="16sp"/>
+    </RelativeLayout>
+</LinearLayout>

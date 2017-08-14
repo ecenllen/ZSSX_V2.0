@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+    <com.gta.zssx.pub.widget.footer.SwipeRefreshLayoutBottom
+        android:id="@+id/swipe_load_frame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/prrv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical"
+            android:overScrollMode="never"/>
+    </com.gta.zssx.pub.widget.footer.SwipeRefreshLayoutBottom>
+    <!--<android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_pull_frame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <com.gta.zssx.pub.widget.footer.SwipeRefreshLayoutBottom
+            android:id="@+id/swipe_load_frame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recylerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#ffffff"
+                android:scrollbars="vertical" />
+        </com.gta.zssx.pub.widget.footer.SwipeRefreshLayoutBottom>
+    </android.support.v4.widget.SwipeRefreshLayout>-->
+
+</RelativeLayout>

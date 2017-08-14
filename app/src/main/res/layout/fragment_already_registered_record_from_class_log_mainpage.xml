@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <include layout="@layout/include_toolbar"/>
+    <RelativeLayout
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="30dp">
+        <LinearLayout
+            android:paddingRight="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_alignParentLeft="true">
+            <TextView
+                android:id="@+id/tv_begin_date"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="begin date"
+                android:textSize="@dimen/size40"
+                android:textColor="@color/word_color_999999"/>
+            <TextView
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/date_to"
+                android:textSize="@dimen/size40"
+                android:textColor="@color/word_color_999999"/>
+            <TextView
+                android:id="@+id/tv_end_date"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="end date"
+                android:textSize="@dimen/size40"
+                android:textColor="@color/word_color_999999"/>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tv_section"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="课时"
+            android:gravity="center"
+            android:layout_alignParentRight="true"
+            android:textSize="@dimen/size40"
+            android:textColor="@color/word_color_999999"/>
+        <TextView
+            android:id="@+id/tv_class_total_section"
+            android:paddingLeft="2dp"
+            android:paddingRight="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="0"
+            android:gravity="center"
+            android:layout_toLeftOf="@+id/tv_section"
+            android:textColor="@color/main_color"
+            android:textSize="@dimen/size40"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="共"
+            android:gravity="center"
+            android:layout_toLeftOf="@+id/tv_class_total_section"
+            android:textSize="@dimen/size40"
+            android:textColor="@color/word_color_999999"/>
+    </RelativeLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!--<android.support.v7.widget.RecyclerView
+            android:id="@+id/list_item_class_show_from_class_log_mainpage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ececec">
+
+        </android.support.v7.widget.RecyclerView>-->
+        <!--<MyLoadMoreRecyclerView
+            android:id="@+id/prrv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </MyLoadMoreRecyclerView>-->
+        <!--<include layout="@layout/footer_load_more"/>-->
+        <com.gta.zssx.pub.hfrecyclerview.HFRecyclerView
+            android:id="@+id/prrv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"/>
+        <TextView
+            android:id="@+id/tv_not_result_text"
+            android:paddingTop="220dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/not_record_now"
+            android:gravity="center_horizontal"
+            android:visibility="gone"/>
+    </FrameLayout>
+
+</LinearLayout>

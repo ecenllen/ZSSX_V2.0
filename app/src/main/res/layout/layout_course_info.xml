@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/schedule_open_width"
+    android:layout_height="@dimen/schedule_course_height"
+    android:layout_marginBottom="@dimen/schedule_magin_bottom"
+    android:background="@color/schedule_backgrouond_def"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/schedule_course_contant_padding_top_bottom"
+    android:paddingLeft="@dimen/schedule_course_contant_padding_left_right"
+    android:paddingRight="@dimen/schedule_course_contant_padding_left_right"
+    android:paddingTop="@dimen/schedule_course_contant_padding_top_bottom">
+
+    <LinearLayout
+        android:layout_gravity="end|top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/schedule_class_remark_tv"
+            android:layout_gravity="end|top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/schedule_class_remark_bg"
+            android:textColor="@color/wirte_ffffff"
+            android:textSize="8sp"
+            android:padding="1dp"
+            android:text="合班"/>
+
+        <TextView
+            android:visibility="gone"
+            android:layout_marginLeft="2dp"
+            android:textSize="8sp"
+            android:padding="1dp"
+            android:id="@+id/schedule_time_remark_tv"
+            android:layout_gravity="end|top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/schedule_time_remark_bg"
+            android:textColor="@color/wirte_ffffff"
+            android:text="阶段"/>
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tv_course_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/textColor_def"
+        android:text=""
+        android:textSize="@dimen/schedule_text_size" />
+
+    <TextView
+        android:id="@+id/tv_course_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/schedule_course_open_address_margin_top"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:text=""
+        android:textSize="@dimen/schedule_course_open_address_size" />
+
+    <TextView
+        android:id="@+id/tv_class_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/schedule_course_open_address_margin_top"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:text=""
+        android:textSize="@dimen/schedule_course_open_address_size"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/schedule_course_open_address_margin_top"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_state_one"
+            style="@style/schedule_state" />
+
+        <TextView
+            android:id="@+id/tv_state_tow"
+            style="@style/schedule_state" />
+
+        <TextView
+            android:id="@+id/tv_state_three"
+            style="@style/schedule_state" />
+        <TextView
+            android:id="@+id/tv_state_four"
+            style="@style/schedule_state" />
+    </LinearLayout>
+
+</LinearLayout>

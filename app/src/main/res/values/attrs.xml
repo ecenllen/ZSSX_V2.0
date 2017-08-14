@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <!--<declare-styleable name="CircleImageView1">
+        <attr name="border_width1" format="dimension" />
+        <attr name="border_color1" format="color" />
+    </declare-styleable>-->
+
+    <!-- 圆形进度条-->
+    <declare-styleable name="wheel">
+        <attr name="pwText" format="string" />
+        <attr name="pwTextColor" format="color" />
+        <attr name="pwTextSize" format="dimension" />
+        <attr name="pwBarColor" format="color" />
+        <attr name="pwRimColor" format="color" />
+        <attr name="pwRimWidth" format="dimension" />
+        <attr name="pwSpinSpeed" format="dimension" />
+        <attr name="pwDelayMillis" format="integer" />
+        <attr name="pwCircleColor" format="color" />
+        <attr name="pwRadius" format="dimension" />
+        <attr name="pwBarWidth" format="dimension" />
+        <attr name="pwBarLength" format="dimension" />
+        <attr name="pwContourColor" format="color" />
+        <attr name="pwContourSize" format="dimension" />
+
+    </declare-styleable>
+
+    <!--滑动选择器的自定义属性-->
+    <declare-styleable name="WheelView">
+        <attr name="normalTextColor" format="color" />
+        <attr name="normalTextSize" format="dimension" />
+        <attr name="selectedTextColor" format="color" />
+        <attr name="selectedTextSize" format="dimension" />
+        <attr name="unitHight" format="dimension" />
+        <attr name="itemNumber" format="integer" />
+        <attr name="lineColor" format="color" />
+        <attr name="lineHeight" format="dimension" />
+        <attr name="maskHight" format="dimension" />
+        <attr name="noEmpty" format="boolean" />
+        <attr name="isEnable" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="SwipeLayout">
+        <attr name="drag_edge" format="enum">
+            <enum name="left" value="0" />
+            <enum name="right" value="1" />
+            <enum name="top" value="2" />
+            <enum name="bottom" value="3" />
+        </attr>
+        <attr name="show_mode" format="enum">
+            <enum name="lay_down" value="0" />
+            <enum name="pull_out" value="1" />
+        </attr>
+    </declare-styleable>
+    <!-- 个人设置 -->
+    <!-- Default Checkbox style. -->
+    <attr name="checkboxStyle" format="reference" />
+
+
+    <!--快速定位栏自定义属性-->
+    <declare-styleable name="EasyFloatingImageView">
+        <attr name="easyFloatingImageType">
+            <enum name="round"
+                  value="2601"/>
+            <enum name="circle"
+                  value="2602"/>
+        </attr>
+        <attr name="easyFloatingBorderRadius"
+              format="dimension"/>
+    </declare-styleable>
+    <declare-styleable name="EasyRecyclerViewSidebar">
+        <attr name="easySidebarBackground"
+              format="color"/>
+        <attr name="easySidebarFontColor"
+              format="color"/>
+        <attr name="easySidebarTouchWrapArea"
+              format="boolean"/>
+    </declare-styleable>
+
+    <!--flowlayout-->
+    <declare-styleable name="TagFlowLayout">
+        <attr name="auto_select_effect" format="boolean"/>
+        <attr name="max_select" format="integer"/>
+        <attr name="flow_gravity">
+            <enum name="left" value="-1" />
+            <enum name="center" value="0" />
+            <enum name="right" value="1" />
+        </attr>
+    </declare-styleable>
+
+</resources>

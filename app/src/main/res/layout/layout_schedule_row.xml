@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:id="@+id/course_count_layout"
+              android:orientation="vertical">
+
+    <!--<TextView-->
+        <!--android:id="@+id/month_tv"-->
+        <!--android:layout_width="@dimen/schedule_left_width"-->
+        <!--android:text="12月"-->
+        <!--android:textSize="@dimen/schedule_text_size"-->
+        <!--android:layout_height="@dimen/schedule_top_height"-->
+        <!--android:layout_marginBottom="@dimen/schedule_magin_bottom"-->
+        <!--android:paddingTop="7dp"-->
+        <!--android:background="#ffffff"/>-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/course_count_tv"-->
+        <!--style="@style/schedule_row"-->
+        <!--android:text="1"/>-->
+
+    <!--<TextView-->
+        <!--style="@style/schedule_row"-->
+        <!--android:text="2"/>-->
+
+    <!--<TextView-->
+        <!--style="@style/schedule_row"-->
+        <!--android:text="3"/>-->
+
+
+    <!--<TextView-->
+        <!--style="@style/schedule_row"-->
+        <!--android:text="4"/>-->
+
+    <!--<TextView-->
+        <!--style="@style/schedule_row"-->
+        <!--android:text="5"/>-->
+
+    <!--<TextView-->
+        <!--style="@style/schedule_row"-->
+        <!--android:text="6"/>-->
+
+    <!--<TextView-->
+        <!--style="@style/schedule_row"-->
+        <!--android:text="7"/>-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/item_eight_tv"-->
+        <!--style="@style/schedule_row"-->
+        <!--android:text="8"/>-->
+</LinearLayout>

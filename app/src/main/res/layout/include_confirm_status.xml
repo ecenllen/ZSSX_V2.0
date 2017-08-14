@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/confirm_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:showIn="@layout/activity_apply_detail">
+
+    <TextView
+        style="@style/AdjustCourse_333333_s16_Style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray_dbdbdb"
+        android:padding="10dp"
+        android:text="确认信息"/>
+
+    <LinearLayout
+        android:id="@+id/confirm_idea_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <TextView
+            style="@style/AdjustCourse_666666_s15_Style"
+            android:id="@+id/confirm_count_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="确认意见（100字）"/>
+
+        <com.gta.zssx.pub.widget.DisableEmojiEditText
+            android:id="@+id/confirm_idea_edit"
+            style="@style/AdjustCourse_666666_s15_Style"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_margin="6dp"
+            android:background="@drawable/react_shape"
+            android:gravity="left|top"
+            android:hint="选填"
+            android:maxLength="100"
+            android:padding="5dp"
+            android:scrollbars="vertical"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/confirm_detail_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp">
+
+            <TextView
+                style="@style/AdjustCourse_666666_s15_Style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="确认情况"/>
+
+            <TextView
+                style="@style/AdjustCourse_666666_s15_Style"
+                android:id="@+id/confirm_status_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="已同意"/>
+        </LinearLayout>
+
+        <include layout="@layout/include_line"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp">
+
+            <TextView
+                style="@style/AdjustCourse_666666_s15_Style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="确认意见"/>
+
+            <TextView
+                style="@style/AdjustCourse_666666_s15_Style"
+                android:id="@+id/confirm_idea_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="已同意"/>
+        </LinearLayout>
+
+        <include layout="@layout/include_line"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp">
+
+            <TextView
+                style="@style/AdjustCourse_666666_s15_Style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="确认时间"/>
+
+            <TextView
+                style="@style/AdjustCourse_666666_s15_Style"
+                android:id="@+id/confirm_time_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="已同意"/>
+        </LinearLayout>
+
+        <include layout="@layout/include_line"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp">
+
+            <TextView
+                style="@style/AdjustCourse_666666_s15_Style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="确  认  者"/>
+
+            <TextView
+                style="@style/AdjustCourse_666666_s15_Style"
+                android:id="@+id/confirm_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="已同意"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
+
+
+            

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+          android:id="@+id/month_tv"
+          android:layout_width="@dimen/schedule_left_width"
+          android:layout_height="@dimen/schedule_top_height"
+          android:layout_marginBottom="@dimen/schedule_magin_bottom"
+          android:background="#ffffff"
+          android:paddingTop="7dp"
+          android:text="12月"
+          android:textSize="@dimen/schedule_text_size">
+
+</TextView>

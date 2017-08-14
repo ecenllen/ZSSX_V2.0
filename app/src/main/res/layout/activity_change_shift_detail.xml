@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_change_shift_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.gta.zssx.mobileOA.view.page.ChangeShiftDetailActivity">
+
+    <include layout="@layout/toolbar_oa_title_duty" />
+
+    <RelativeLayout
+        android:id="@+id/rl_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginTop="40sp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <TextView
+            android:id="@+id/tv_personHint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar"
+            android:text="申请人："
+            android:textSize="@dimen/sp_16" />
+
+        <TextView
+            android:layout_toRightOf="@+id/tv_personHint"
+            android:id="@+id/tv_person"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp_16"
+            android:text="-"/>
+
+        <TextView
+            android:id="@+id/tv_dateHint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_personHint"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="调班日期："
+            android:textSize="@dimen/sp_16" />
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tv_dateHint"
+            android:layout_below="@+id/tv_person"
+            android:layout_marginTop="@dimen/dp_10"
+            android:textSize="@dimen/sp_16"
+            android:text="-"/>
+
+        <TextView
+            android:id="@+id/tv_typeHint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_dateHint"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="安排方式："
+            android:textSize="@dimen/sp_16" />
+
+        <TextView
+            android:id="@+id/tv_arrangeType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_dateHint"
+            android:layout_toRightOf="@+id/tv_typeHint"
+            android:layout_marginTop="@dimen/dp_10"
+            android:textSize="@dimen/sp_16"
+            android:text="-"/>
+
+        <TextView
+            android:id="@+id/tv_statusHint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_typeHint"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="审批状态："
+            android:textSize="@dimen/sp_16" />
+
+        <TextView
+            android:id="@+id/tv_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tv_statusHint"
+            android:layout_below="@+id/tv_typeHint"
+            android:layout_marginTop="@dimen/dp_10"
+            android:textSize="@dimen/sp_16"
+            android:text="-"/>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:id="@+id/tv_disagree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30dp"
+            android:layout_toLeftOf="@+id/view_divider"
+            android:background="@color/main_color"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:text="不同意"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_16" />
+
+        <View
+            android:id="@+id/view_divider"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_centerInParent="true" />
+
+
+        <TextView
+            android:id="@+id/tv_agree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="30dp"
+            android:layout_toRightOf="@+id/view_divider"
+            android:background="@color/main_color"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:text="同  意"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_16" />
+    </RelativeLayout>
+</RelativeLayout>

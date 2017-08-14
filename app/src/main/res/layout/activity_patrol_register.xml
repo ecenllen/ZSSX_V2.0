@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rl_date"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="5dp"
+                    android:text="巡视日期"
+                    android:textColor="@color/gray_999999"
+                    android:textSize="16sp"
+                    />
+
+                <ImageView
+                    android:id="@+id/iv_right_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:paddingRight="5dp"
+                    android:src="@drawable/right_arrow_normal"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_patrolRegister_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:layout_toLeftOf="@id/iv_right_arrow"
+                    android:textColor="@color/gray_666666"
+                    android:textSize="16sp"
+                    />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/divide_line"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_class"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="5dp"
+                    android:text="班级"
+                    android:textColor="@color/gray_999999"
+                    android:textSize="16sp"
+                    />
+
+                <ImageView
+                    android:id="@+id/iv_right_arrow_class"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:paddingRight="5dp"
+                    android:src="@drawable/right_arrow_normal"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_patrolRegister_className"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:layout_toLeftOf="@id/iv_right_arrow_class"
+                    android:ellipsize="end"
+                    android:maxEms="10"
+                    android:singleLine="true"
+                    android:textColor="@color/gray_666666"
+                    android:textSize="16sp"
+                    />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/divide_line"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_section"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="5dp"
+                    android:text="上课节次"
+                    android:textColor="@color/gray_999999"
+                    android:textSize="16sp"
+                    />
+
+                <ImageView
+                    android:id="@+id/iv_right_arrow_section"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:paddingRight="5dp"
+                    android:src="@drawable/right_arrow_normal"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_patrolRegister_sections"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:layout_toLeftOf="@id/iv_right_arrow_section"
+                    android:text=""
+                    android:textColor="@color/gray_666666"
+                    android:textSize="16sp"
+                    />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/divide_line"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_teacher"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                >
+
+                <TextView
+                    android:id="@+id/tv_message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="5dp"
+                    android:text="上课教师"
+                    android:textColor="@color/gray_999999"
+                    android:textSize="16sp"
+                    />
+
+                <ImageView
+                    android:id="@+id/iv_right_arrow_section1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:paddingRight="5dp"
+                    android:src="@drawable/right_arrow_normal"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_patrolRegister_sections1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:layout_toLeftOf="@id/iv_right_arrow_section1"
+                    android:ellipsize="end"
+                    android:maxEms="10"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/gray_666666"
+                    android:textSize="16sp"
+                    />
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/divide_line"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_toLeftOf="@+id/switch_auto"
+                    android:text="自动计算教师、学生、卫生的最终得分"
+                    android:textColor="@color/gray_999999"
+                    android:textSize="16sp"
+                    />
+
+                <com.kyleduo.switchbutton.SwitchButton
+                    android:id="@+id/switch_auto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:checked="true"
+                    app:kswBackDrawable="@drawable/selector_switch_back"
+                    app:kswThumbDrawable="@drawable/selector_switch_choose"
+                    app:kswThumbHeight="20dp"
+                    app:kswThumbWidth="30dp"
+                    />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/divide_line"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_dockScore"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                >
+
+                <TextView
+                    android:id="@+id/tv_patrolRegister_dockScore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="5dp"
+                    android:text="扣分详情"
+                    android:textColor="@color/gray_999999"
+                    android:textSize="16sp"
+                    />
+
+                <ImageView
+                    android:id="@+id/iv_right_arrow_dockScore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:paddingRight="5dp"
+                    android:src="@drawable/right_arrow_normal"
+                    />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/divide_line"
+                    />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_score_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:orientation="vertical"
+                />
+
+            <RelativeLayout
+                android:id="@+id/layout_dockScore2"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:visibility="gone"
+                >
+
+                <TextView
+                    android:id="@+id/tv_patrolRegister_dockScore2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="5dp"
+                    android:text="扣分详情"
+                    android:textColor="@color/gray_999999"
+                    android:textSize="16sp"
+                    />
+
+                <ImageView
+                    android:id="@+id/iv_right_arrow_dockScore2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:paddingRight="5dp"
+                    android:src="@drawable/right_arrow_normal"
+                    />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/divide_line"
+                    />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

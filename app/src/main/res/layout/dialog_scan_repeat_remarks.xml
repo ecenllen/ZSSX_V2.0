@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="25dp"
+    app:cardBackgroundColor="@color/wirte_ffffff"
+    app:cardCornerRadius="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:text="当前扫描的资产已有备注，是否修改？"
+            android:textColor="@color/black_323232"
+            android:textSize="18sp"/>
+
+
+        <TextView
+            android:maxLines="2"
+            android:textSize="16sp"
+            android:ellipsize="end"
+            android:id="@+id/tv_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="@string/crrent_record"/>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/view_line"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            >
+
+            <TextView
+                android:textSize="18sp"
+                android:id="@+id/no_record_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="不需要修改"
+                android:textColor="@color/black_323232"/>
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="@color/view_line"/>
+
+            <TextView
+                android:textSize="18sp"
+                android:id="@+id/record_no_flag_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="修改备注"
+                android:textColor="@color/black_323232"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</android.support.v7.widget.CardView>

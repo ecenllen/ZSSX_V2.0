@@ -1,0 +1,28 @@
+apply plugin: 'com.android.library'
+
+android {
+    def app = rootProject.ext.android
+    compileSdkVersion app.compileSdkVersion
+    buildToolsVersion app.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion app.minSdkVersion
+        targetSdkVersion app.targetSdkVersion
+        versionCode app.versionCode
+        versionName app.versionName
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    buildToolsVersion '25.0.0'
+}
+
+dependencies {
+    def app = rootProject.ext.android
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile "com.android.support:recyclerview-v7:$app.supportVersion"
+    compile "com.android.support:appcompat-v7:$app.supportVersion"
+}

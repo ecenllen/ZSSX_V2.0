@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_item"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/layout_container"
+        android:layout_width="wrap_content"
+        android:layout_height="105dp">
+
+        <ImageView
+            android:id="@+id/list_item_show"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginTop="5dp" />
+
+        <ImageView
+            android:id="@+id/iv_event_indicator"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_gravity="right"
+            android:layout_marginTop="5dp"
+            android:visibility="gone"
+            android:src="@drawable/ic_oa_remind_02" />
+
+        <TextView
+            android:id="@+id/tv_list_item_show"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:background="@drawable/ic_oa_remind_02"
+            android:gravity="center"
+            android:textColor="@color/wirte_ffffff"
+            android:textSize="@dimen/two_level_word" />
+
+        <TextView
+            android:id="@+id/tv_oa_item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:text="item"
+            android:textSize="@dimen/text_size_s18" />
+    </FrameLayout>
+
+</LinearLayout>

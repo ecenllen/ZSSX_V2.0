@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/include_toolbar"
+        android:visibility="gone"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/confirm_btn">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include
+                layout="@layout/include_adjust_course_detail"/>
+
+            <LinearLayout
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+
+                    android:id="@+id/share_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:orientation="vertical">
+
+                    <include layout="@layout/include_share"/>
+                </LinearLayout>
+
+                <include
+                    layout="@layout/include_confirm_status"
+                    android:visibility="gone"/>
+
+                <include
+                    layout="@layout/include_audit_status"
+                    android:visibility="gone"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/confirm_btn"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/main_color_selector"
+        android:text="确定"
+        android:textColor="@color/wirte_ffffff"
+        android:textSize="16sp"
+        android:visibility="gone"
+        />
+
+</RelativeLayout>

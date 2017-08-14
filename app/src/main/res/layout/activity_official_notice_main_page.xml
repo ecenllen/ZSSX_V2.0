@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--suppress AndroidDomInspection, AndroidDomInspection -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.gta.zssx.mobileOA.view.page.OfficialNoticeActivity"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/toolbar_oa_title" />
+    <!--<android.support.design.widget.TabLayout
+        android:layout_below="@+id/toolbar"
+        android:id="@+id/tl_tab_official_notice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        app:tabIndicatorColor="@color/main_color"
+        app:tabSelectedTextColor="@color/main_color"
+        app:tabTextColor="@color/gray_666666" />
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_official_notice"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tl_tab_official_notice"
+        android:background="@color/f4f4f4" />-->
+    <FrameLayout
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/container">
+    </FrameLayout>
+</RelativeLayout>

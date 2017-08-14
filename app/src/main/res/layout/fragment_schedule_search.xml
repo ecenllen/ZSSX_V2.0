@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_marginTop="10dp"
+              android:background="@color/wirte_ffffff"
+              android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/divide_line"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="学年学期："
+            android:textColor="@color/black_323232"/>
+
+        <TextView
+            android:id="@+id/semester_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text=""
+            android:textColor="@color/black_323232"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/class_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/calss_choose_bg_selector"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/search_type_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="班级:"
+            android:textColor="@color/black_323232"/>
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:drawableLeft="@drawable/der_dropdownpfeil"/>
+
+            <TextView
+                android:id="@+id/class_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:text="请选择"
+                android:textColor="@color/gray_999999"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/date_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/calss_choose_bg_selector"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="日期："
+            android:textColor="@color/black_323232"/>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp">
+
+            <TextView
+                android:id="@+id/date_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="请选择（选填）"
+                android:textColor="@color/gray_999999"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:drawableLeft="@drawable/der_dropdownpfeil"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/search_schedule_btn"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/btn_background_blue_two_selector"
+        android:text="查询"
+        android:textColor="@color/white"/>
+
+</LinearLayout>

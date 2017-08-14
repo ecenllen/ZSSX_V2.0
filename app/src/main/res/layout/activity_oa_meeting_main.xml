@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_oa_meeting_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.gta.zssx.mobileOA.view.page.MeetingMainActivity">
+
+    <include layout="@layout/include_toolbar" />
+
+    <com.gta.zssx.pub.hfrecyclerview.HFRecyclerView
+        android:id="@+id/recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        android:layout_below="@+id/toolbar"/>
+
+    <TextView
+        android:id="@+id/tv_emptyHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textSize="18sp"
+        android:text="暂无数据"
+        android:visibility="gone"/>
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tl_tab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_centerHorizontal="true"
+        app:tabIndicatorColor="@color/main_color"
+        app:tabSelectedTextColor="@color/main_color"
+        app:tabTextColor="@color/gray_666666"
+        android:visibility="gone"/>
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_meeting"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tl_tab"
+        android:background="@color/f4f4f4"
+        android:visibility="gone"/>
+</RelativeLayout>

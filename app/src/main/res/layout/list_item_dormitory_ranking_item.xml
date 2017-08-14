@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/dormitory_cardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/layout_item_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/cardview_backgroud"
+        android:padding="8dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_dormitory_item_name"
+                style="@style/dormitory_option_item_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/tv_dormitory_item_status"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="指标项" />
+
+            <TextView
+                android:id="@+id/tv_dormitory_item_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="未送审"
+                android:textSize="@dimen/sp_14" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@color/divide_line" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/layout_dormitory_show"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="4dp"
+                android:layout_toLeftOf="@+id/iv_image_arrow"
+                android:paddingRight="4dp">
+
+                <TextView
+                    android:id="@+id/tv_dormitory_name"
+                    style="@style/dormitory_main_list_sub_item_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="宿舍楼/专业部：" />
+
+                <TextView
+                    android:id="@+id/tv_dormitory_name_show"
+                    style="@style/dormitory_main_list_sub_item_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/tv_dormitory_name"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="宿舍..." />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout_dormitory_show">
+
+                <TextView
+                    android:id="@+id/tv_dormitory_date"
+                    style="@style/dormitory_main_list_sub_item_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="评分日期：" />
+
+                <TextView
+                    android:id="@+id/tv_dormitory_date_show"
+                    style="@style/dormitory_main_list_sub_item_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/tv_dormitory_date"
+                    android:text="2017-07-01" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/btn_dormitory_item_submit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/selector_dormitory_item_submit"
+                        android:gravity="center"
+                        android:paddingBottom="4dp"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:paddingTop="4dp"
+                        android:text="送审"
+                        android:textColor="@color/wirte_ffffff" />
+
+                    <TextView
+                        android:id="@+id/btn_dormitory_item_delete"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="28dp"
+                        android:background="@drawable/selector_dormitory_item_delete"
+                        android:gravity="center"
+                        android:paddingBottom="4dp"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:paddingTop="4dp"
+                        android:text="删除"
+                        android:textColor="@color/word_color_666666" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/iv_image_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="2dp"
+                android:src="@drawable/right_arrow_normal" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

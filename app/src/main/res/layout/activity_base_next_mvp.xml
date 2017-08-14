@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/base_activity_ll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:id="@+id/container"
+        android:layout_weight="1"
+        android:layout_height="0dp">
+
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/last"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:text="上一宿舍"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/save"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:text="保存"
+            android:layout_height="wrap_content" />
+        <Button
+            android:text="下一宿舍"
+            android:id="@+id/next"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</LinearLayout>

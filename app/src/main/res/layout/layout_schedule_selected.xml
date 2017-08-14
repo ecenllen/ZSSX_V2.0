@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/ll_col"
+              android:layout_width="wrap_content"
+              android:layout_height="match_parent"
+              android:layout_marginLeft="@dimen/schedule_magin_left"
+              android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_week_open"
+        style="@style/schedule_col"
+        android:layout_width="@dimen/schedule_open_width"
+        android:background="@color/schedule_open_top"
+        android:lineSpacingExtra="3dp"/>
+
+    <TextView
+        android:id="@+id/tv_week_close"
+        style="@style/schedule_col"
+        android:lineSpacingExtra="3dp"/>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/ll_course_open"
+            android:layout_width="@dimen/schedule_open_width"
+            android:layout_height="match_parent"
+            android:orientation="vertical"/>
+
+        <LinearLayout
+            android:id="@+id/ll_course_close"
+            android:layout_width="@dimen/schedule_col_close_width"
+            android:layout_height="match_parent"
+            android:orientation="vertical"/>
+
+    </FrameLayout>
+
+</LinearLayout>

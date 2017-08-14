@@ -1,0 +1,87 @@
+{
+  "Code": 0,
+  "Message": "success",
+  "Data": {
+    "Auditor": null,
+    "AuditorDate": null,
+    "Opinion": "阿萨德飞洒地方是的冯绍峰的",
+    "AuditorOpinion": "",
+    "ClassroomRegisterList": [
+      {
+        "Date": "2017-07-24",
+        "WeekDate": 1,
+        "IsComplete": false,
+        "SectionDataList": [
+          {
+            "Section": 1,
+            "SectionComplete": false,
+            "CourseID": 16,
+            "CourseName": "语文",
+            "TeacherID": "398a71e3-dc1f-4c86-9739-e45ef34e680e",
+            "TeacherName": "周一峰",
+            "Score": 100
+          },
+          {
+            "Section": 2,
+            "SectionComplete": false,
+            "CourseID": 17,
+            "CourseName": "数学",
+            "TeacherID": "e3c199a7-e248-43fe-bd83-3f2de7371bef",
+            "TeacherName": "李部长",
+            "Score": 90
+          }
+        ],
+        "ClassTeachWeekId": 16
+      },
+      {
+        "Date": "2017-07-25",
+        "WeekDate": 2,
+        "IsComplete": false,
+        "SectionDataList": [
+          {
+            "Section": 1,
+            "SectionComplete": false,
+            "CourseID": 17,
+            "CourseName": "数学",
+            "TeacherID": "53d7347b-c78e-4275-b2b3-c225470b5e19",
+            "TeacherName": "张部长",
+            "Score": 80
+          }
+        ],
+        "ClassTeachWeekId": 17
+      },
+      {
+        "Date": "2017-07-26",
+        "WeekDate": 3,
+        "IsComplete": false,
+        "SectionDataList": [],
+        "ClassTeachWeekId": 18
+      },
+      {
+        "Date": "2017-07-27",
+        "WeekDate": 4,
+        "IsComplete": false,
+        "SectionDataList": [
+          {
+            "Section": 1,
+            "SectionComplete": false,
+            "CourseID": 0,
+            "CourseName": "的得分的得分",
+            "TeacherID": "c8e5c3a1-7842-4c5d-bd02-c0e1b4138845",
+            "TeacherName": "玲老师",
+            "Score": 100
+          }
+        ],
+        "ClassTeachWeekId": 19
+      },
+      {
+        "Date": "2017-07-28",
+        "WeekDate": 5,
+        "IsComplete": false,
+        "SectionDataList": [],
+        "ClassTeachWeekId": 20
+      }
+    ],
+    "ClassTeachId": 1330
+  }
+}

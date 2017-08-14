@@ -1,0 +1,55 @@
+{
+  "Code": 0,
+  "Message": "success",
+  "Data": [
+    {
+      "orgId": 12,
+      "parentId": 0,
+      "name": "办公室",
+      "deptList": [
+        {
+          "deptId": "26",
+          "deptName": "测试11111111",
+          "teacherCode": null,
+          "type": 1,
+          "orgId": 0
+        },
+        {
+          "deptId": "96d406dd-daaa-4265-9e6e-e37dc612a40a",
+          "deptName": "唐冬梅",
+          "teacherCode": "H00003",
+          "type": 0,
+          "orgId": 12
+        },
+        {
+          "deptId": "4b35bc47-dd35-4748-ad6f-09b149872d36",
+          "deptName": "师大",
+          "teacherCode": "T123121313",
+          "type": 0,
+          "orgId": 12
+        },
+        {
+          "deptId": "997598c4-1dfc-4645-827a-b65e1e9c25ac",
+          "deptName": "张飞测试",
+          "teacherCode": "T10001",
+          "type": 0,
+          "orgId": 12
+        },
+        {
+          "deptId": "6c8e464d-7d70-4f3f-bb7b-adf6555063cb",
+          "deptName": "gg",
+          "teacherCode": "T321321",
+          "type": 0,
+          "orgId": 12
+        },
+        {
+          "deptId": "cff3863d-5f6d-410d-a3d4-8c51508999b0",
+          "deptName": "rr",
+          "teacherCode": "T13w",
+          "type": 0,
+          "orgId": 12
+        }
+      ]
+    }
+  ]
+}

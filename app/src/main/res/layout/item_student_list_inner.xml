@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:id="@+id/layout_student_status_item">
+
+    <include layout="@layout/include_line"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp">
+
+        <TextView
+            android:id="@+id/student_name_tv"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="高晓松啊"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:textColor="@color/gray_999999"/>
+
+        <RadioGroup
+            android:id="@+id/student_list_radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:orientation="horizontal"
+            android:weightSum="5">
+
+            <RadioButton
+                android:id="@+id/normal_radio_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="3dp"
+                android:layout_weight="1"
+                android:background="@drawable/radio_button_normal_selector"
+                android:button="@null"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="正常"
+                android:textColor="@color/radio_button_green_selector"/>
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="@color/gray_d7d7d7"
+                android:visibility="gone"/>
+
+            <RadioButton
+                android:id="@+id/delay_radio_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="3dp"
+                android:layout_weight="1"
+                android:background="@drawable/radio_button_unusual_selector"
+                android:button="@null"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="迟到"
+                android:textColor="@color/radio_button_red_selector"/>
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="@color/gray_d7d7d7"
+                android:visibility="gone"/>
+            <RadioButton
+                android:id="@+id/absent_radio_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="3dp"
+                android:layout_weight="1"
+                android:background="@drawable/radio_button_unusual_selector"
+                android:button="@null"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="旷课"
+                android:textColor="@color/radio_button_red_selector"/>
+
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="@color/gray_d7d7d7"
+                android:visibility="gone"/>
+
+            <RadioButton
+                android:id="@+id/leave_radio_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="3dp"
+                android:layout_weight="1"
+                android:background="@drawable/radio_button_unusual_selector"
+                android:button="@null"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="请假"
+                android:textColor="@color/radio_button_red_selector"/>
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="@color/gray_d7d7d7"
+                android:visibility="gone"/>
+
+            <RadioButton
+                android:id="@+id/vocation_radio_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="3dp"
+                android:layout_weight="1"
+                android:background="@drawable/radio_button_unusual_selector"
+                android:button="@null"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="公假"
+                android:textColor="@color/radio_button_red_selector"/>
+        </RadioGroup>
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="10dp"
+    >
+
+    <LinearLayout
+        android:id="@+id/linearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:paddingRight="10dp"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@null"
+            android:button="@drawable/checkbox_selector"
+            android:clickable="false"
+            />
+
+        <TextView
+            android:id="@+id/period"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:text="阶段一"/>
+
+        <TextView
+            android:id="@+id/detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="40dp"
+            android:layout_toRightOf="@+id/linearlayout"
+            android:lineSpacingExtra="2dp"
+            android:text="计算机一班某某班级\n准时上课\n哈哈哈"/>
+    </LinearLayout>
+
+    <include layout="@layout/include_line"/>
+</LinearLayout>
+
+

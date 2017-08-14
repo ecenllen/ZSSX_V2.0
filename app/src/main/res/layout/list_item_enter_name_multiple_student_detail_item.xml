@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#ffffff">
+
+    <RelativeLayout
+        android:id="@+id/layout_student_detail_item"
+        android:layout_width="wrap_content"
+        android:layout_height="42dp">
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cb_option_checkbox"
+            android:clickable="false"
+            android:layout_alignTop="@+id/tv_student_item_name"
+            android:button="@drawable/checkbox_selector"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:id="@+id/tv_student_item_name"
+            android:paddingLeft="5dp"
+            android:layout_toRightOf="@+id/cb_option_checkbox"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxWidth="68dp"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:text="指标项XX xxx"
+            android:textSize="14dp"
+            android:layout_centerVertical="true"/>
+
+        <RelativeLayout
+            android:layout_toRightOf="@+id/tv_student_item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/tv_student_item_name"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tv_left_brackets"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="("
+                android:textSize="14dp"/>
+
+            <TextView
+                android:id="@+id/tv_minus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tv_left_brackets"
+                android:text="@string/string_minus"
+                android:visibility="gone"
+                android:textSize="14dp"/>
+
+            <TextView
+                android:id="@+id/tv_student_score_show"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tv_minus"
+                android:textSize="14dp"/>
+
+            <TextView
+                android:id="@+id/tv_score_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tv_student_score_show"
+                android:text="分"
+                android:textSize="14dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/tv_score_name"
+                android:text=")"
+                android:textSize="14dp"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

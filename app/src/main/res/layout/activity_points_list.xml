@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/wirte_ffffff"
+            android:scrollbars="none"
+            >
+
+            <RelativeLayout
+                android:id="@+id/rl_see_points"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/layout_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="45dp"
+                        android:paddingBottom="3dp"
+                        android:paddingTop="3dp">
+
+                        <TextView
+                            android:id="@+id/tv_course_name_show"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="84dp"
+                            android:gravity="center_vertical"
+                            android:text=""
+                            android:textColor="@color/word_color_666666"
+                            android:textSize="@dimen/one_level_word"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:gravity="center_vertical"
+                            android:text="专业部"
+                            android:textColor="@color/word_color_999999"
+                            android:textSize="@dimen/one_level_word"/>
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/view_line"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:text="上课节次"
+                            android:textColor="@color/word_color_999999"
+                            android:textSize="@dimen/one_level_word"/>
+
+                        <TextView
+                            android:id="@+id/tv_dpat_show"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:text=""
+                            android:textColor="@color/word_color_666666"
+                            android:textSize="@dimen/one_level_word"/>
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/view_line"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="45dp"
+                        android:paddingBottom="3dp"
+                        android:paddingTop="3dp"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="上课教师"
+                            android:textColor="@color/word_color_999999"
+                            android:textSize="@dimen/one_level_word"/>
+
+                        <TextView
+                            android:id="@+id/tv_teacher_name_show"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="84dp"
+                            android:text=""
+                            android:textColor="@color/word_color_666666"
+                            android:textSize="@dimen/one_level_word"/>
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/view_line"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:text="状态"
+                            android:textColor="@color/word_color_999999"
+                            android:textSize="@dimen/one_level_word"/>
+
+                        <TextView
+                            android:id="@+id/tv_text_class_teacher"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:text=""
+                            android:textColor="@color/word_color_666666"
+                            android:textSize="@dimen/one_level_word"/>
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/view_line"/>
+
+                    <LinearLayout
+                        android:id="@+id/ll_see_points_details"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+        </ScrollView>
+
+        <TextView
+            android:id="@+id/tv_no_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="暂无数据"
+            android:textSize="18sp"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

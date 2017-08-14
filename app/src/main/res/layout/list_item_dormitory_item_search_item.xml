@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center">
+
+    <RelativeLayout
+        android:minHeight="40dp"
+        android:id="@+id/layout_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_item_project2" />
+
+        <TextView
+            android:layout_toRightOf="@+id/iv_group"
+            android:layout_toLeftOf="@+id/iv_selected_icon"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/tv_dormitory_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="指标项"
+            android:textColor="@color/word_color_666666"
+            android:textSize="18sp"/>
+
+        <ImageView
+            android:id="@+id/iv_selected_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:visibility="invisible"
+            android:src="@drawable/ic_duty_check_done"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/divide_line"/>
+</LinearLayout>

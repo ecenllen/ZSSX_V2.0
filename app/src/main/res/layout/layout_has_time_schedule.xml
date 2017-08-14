@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="@dimen/schedule_open_width"
+              android:layout_height="@dimen/schedule_course_height"
+              android:layout_marginBottom="@dimen/schedule_magin_bottom"
+              android:background="@color/schedule_backgrouond_def"
+              android:orientation="vertical"
+              android:paddingBottom="@dimen/schedule_course_contant_padding_top_bottom"
+              android:paddingLeft="@dimen/schedule_course_contant_padding_left_right"
+              android:paddingRight="@dimen/schedule_course_contant_padding_left_right"
+              android:paddingTop="@dimen/schedule_course_contant_padding_top_bottom">
+
+    <TextView
+        android:layout_centerInParent="true"
+        android:id="@+id/tv_class_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/schedule_course_open_address_margin_top"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text=""
+        android:textSize="@dimen/schedule_course_open_address_size"
+        />
+
+</RelativeLayout>

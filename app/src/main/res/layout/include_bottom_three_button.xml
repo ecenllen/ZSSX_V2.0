@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:paddingTop="2dp"
+    android:paddingBottom="2dp"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/tv_previous_section"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_weight="1"
+        android:background="@drawable/btn_background_blue_selector"
+        android:gravity="center"
+        android:text="@string/previous_section"
+        android:textColor="@color/text_color_enable"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tv_save"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:enabled="false"
+        android:layout_weight="1"
+        android:background="@drawable/btn_background_yellow_selector"
+        android:gravity="center"
+        android:text="@string/save_score"
+        android:textColor="@color/text_color_enable"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tv_next_section"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_weight="1"
+        android:background="@drawable/btn_background_blue_selector"
+        android:gravity="center"
+        android:text="@string/next_section"
+        android:textColor="@color/text_color_enable"
+        android:textSize="18sp" />
+
+</LinearLayout>

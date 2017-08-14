@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ===================
+   description：卡荟安卓通用文本资源
+    中文简体 
+   author：wangwoo
+ =====================-->
+<resources>
+    <!-- button按钮 -->
+    <string name="util_text_confuse">拒绝</string>
+    <string name="util_text_recipes">接受</string>
+    <string name="util_text_done">完成</string>
+    <string name="util_text_confirm">确定</string>
+    <string name="util_text_cancel">取消</string>
+    <string name="util_text_back">返回</string>
+    <string name="util_text_close">关闭</string>
+    <string name="util_text_next">下一步</string>
+    <string name="util_text_commit">提交</string>
+    <string name="util_text_previous">上一步</string>
+    <string name="util_text_save">保存</string>
+    <string name="util_text_favourite">收藏</string>
+    <string name="util_text_share">分享</string>
+
+    <!-- 吐司  tips -->
+    <string name="util_toast_shareSucc">分享成功</string>
+    <string name="util_toast_shareFail">分享失败</string>
+    <string name="util_toast_send_email">发送邮件</string>
+    <string name="util_toast_already_in_the_page">已经在当前页面</string>
+    <string name="util_toast_TipsClickAgain">再次点击退出程序</string>
+    <string name="util_toast_wrongLocation">地址错误</string>
+    <string name="util_toast_mapNotReady">地图未准备好</string>
+    <string name="util_toast_Loading">加载中...</string>
+    <string name="util_toast_no_data">暂无数据</string>
+    <string name="util_toast_success_get_data">获取数据成功</string>
+    <string name="util_toast_failed_get_data">获取数据失败</string>
+    <!--     <string name="util_toast_network_fail">请检查网络是否正常连接，或稍后重试</string> -->
+    <string name="util_toast_network_fail">当前网络不可用，请检查网络连接</string>
+    <string name="util_toast_login_Fail">登入失败</string>
+    <string name="util_toast_login_Succ">登入成功</string>
+    <string name="util_toast_accountNameOrPasswordError">账号或密码错误，请重新输入</string>
+    <string name="util_toast_account_not_exit">用户不存在</string>
+    <string name="util_toast_not_binding_equipment">该手机不是绑定设备请解绑后重新登入</string>
+    <string name="util_toast_TipsAccountNoNull">请输入账号</string>
+    <string name="util_toast_TipsPasswordNoNull">请输入密码</string>
+    <string name="util_toast_com_toast_enter_telephone">请输入手机号码</string>
+    <string name="util_toast_phone_not_available">暂未提供电话</string>
+    <string name="util_toast_dialornot">立即拨打电话：</string>
+    <string name="util_toast_map">地图</string>
+    <string name="util_toast_telphone">拨打电话</string>
+    <string name="util_toast_select_phone">请选择电话</string>
+    <string name="util_toast_select_web">请选择网址</string>
+    <string name="util_toast_web_not_available">暂未提供网址链接</string>
+    <string name="util_toast_map_not_available">暂未提供定位</string>
+
+    <string name="util_dialog_choose_photolibrary">相冊</string>
+    <string name="util_dialog_choose_camera">拍照</string>
+    <string name="util_dialog_choose_way_pick_image">請選擇挑選圖片的方式</string>
+    <!-- 登陸相關 -->
+    <string name="util_text_Login">登录</string>
+    <string name="util_text_LogOut">登出</string>
+    <string name="util_dialog_confirm_to_logout">确定登出?</string>
+    <string name="util_dialog_confirm_to_login">您尚未登入,请先登入</string>
+    <!-- 列表相关 -->
+    <string name="util_toast_pullForMore">下拉刷新获取下一页</string>
+    <string name="util_toast_inLastPage">已经在最后一页</string>
+    <!-- 推送 -->
+    <string name="util_dialog_Go_for_details">是否前去查看?</string>
+    <string name="util_dialog_new_message">新消息</string>
+
+
+
+    <string name="no_phone_data">暂未提供电话</string>
+
+    <string name="util_text_yes">是</string>
+    <string name="util_text_no">否</string>
+</resources>

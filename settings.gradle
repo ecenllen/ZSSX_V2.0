@@ -1,0 +1,6 @@
+include ':app', ':library:librarySwipListView'
+include ':library:GTAUtils'
+include ':library:l_SwipeRefreshAndLoadMore'
+include ':library:l_jpush'
+include ':library:librarySwipListView'
+include ':library:StickyAdapter'

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/wirte_ffffff">
+    <!-- 录入姓名多项 -->
+    <RelativeLayout
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_dormitory_score"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="宿舍/班级得分"/>
+        <TextView
+            android:id="@+id/tv_dormitory_score_show"
+            android:layout_toRightOf="@+id/tv_dormitory_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"/>
+        <TextView
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/string_score_name_show"
+            />
+    </RelativeLayout>
+    <RelativeLayout
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_dormitory_remark"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="宿舍/班级得分"/>
+        <EditText
+            android:id="@+id/tv_dormitory_class_score_show"
+            android:layout_toRightOf="@+id/tv_dormitory_remark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+            <!-- 多项 -->
+            <include layout="@layout/layout_dormitory_enter_name_multiple_item"/>
+    </ScrollView>
+</LinearLayout>

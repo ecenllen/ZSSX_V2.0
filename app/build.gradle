@@ -1,0 +1,231 @@
+apply plugin: 'com.android.application'
+apply plugin: 'bugly'
+apply plugin: 'me.tatarka.retrolambda'
+def InnerVersionName = new Date().format('yyMMdd')
+
+/**采用解析Properties文件获取签名信息的方式，把签名放进版本控制不是明智的做法*/
+Properties props = new Properties()
+props.load(new FileInputStream(file("signing.properties")))
+
+/*腾讯bugly的配置参数*/
+//崩溃上报信息,网址为：http://bugly.qq.com/apps
+//登录账号: 3462792044
+//登录密码: gtaapp2016
+//正式appId = "1e5bec78f4"
+//正式appKey = "c19babad-7740-43f9-9eb9-692b9c8a19b0"
+//测试appId = "900033957"
+//测试appKey = "gbWjaNNlh9olF1Mu"
+
+bugly {
+    appId = '900033957'
+    appKey = 'gbWjaNNlh9olF1Mu'
+}
+
+android {
+    def app = rootProject.ext.android
+    compileSdkVersion app.compileSdkVersion
+    buildToolsVersion app.buildToolsVersion
+    useLibrary 'org.apache.http.legacy'
+
+    defaultConfig {
+        applicationId app.applicationId
+        minSdkVersion app.minSdkVersion
+        targetSdkVersion app.targetSdkVersion
+        versionCode app.versionCode
+        versionName app.versionName
+
+//        //java8 必须配置
+//        jackOptions {
+//            enabled true
+//        }
+
+        // Enabling multidex support.
+        multiDexEnabled true
+
+    }
+
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+
+    //签名配置
+    signingConfigs {
+        release {
+            keyAlias props['KEY_ALIAS']
+            keyPassword props['KEY_PASSWORD']
+            storeFile file(props['KEYSTORE_FILE'])
+            storePassword props['KEYSTORE_PASSWORD']
+        }
+    }
+
+    buildTypes {
+        release {
+            //签名
+            signingConfig signingConfigs.release
+            //前一部分代表系统默认的android程序的混淆文件，该文件已经包含了基本的混淆声明
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            //Zipalign优化
+            zipAlignEnabled true
+            // 移除无用的resource文件
+            shrinkResources true
+            //混淆
+            minifyEnabled true
+            debuggable true
+            resValue "string", "Buyly_AppId", "1e5bec78f4"
+            /*正式 JpushKey：0518dd9ae572ff43250ef523*/
+            resValue "string", "JpushKey", "0518dd9ae572ff43250ef523"
+            resValue "string", "WeChat_AppID","wx9b85f0ef788446ca"
+            resValue "string", "WeChat_AppSecret","fef55d029b539acdd0f54081fab63dc4"
+            resValue "string", "PASSWORD_CRYPT_KEY","9x6slPpxxu6HEaMyS7yY8d4uH7KlI5MjbZnUJztEDW1Vxa1"
+        }
+
+        debug {
+            //签名
+            signingConfig signingConfigs.release
+            applicationIdSuffix ".debug" //为debug 的buildType在application加后缀
+            /*测试 JpushKey：d326d32f8df3a0dcb656f04e*/
+            resValue "string", "JpushKey", "d326d32f8df3a0dcb656f04e"
+            minifyEnabled false
+            debuggable true
+            resValue "string", "Buyly_AppId", "900033957"
+            resValue "string", "WeChat_AppID","wx73e83c5902e8455e"
+            resValue "string", "WeChat_AppSecret","f9b2cc7e8c2db5e4f00ee82a9fb3cd0d"
+            resValue "string", "PASSWORD_CRYPT_KEY","9x6slPpxxu6HEaMyS7yY8d4uH7KlI5MjbZnUJztEDW1Vxa1"
+//            // 复制release的属性和签名配置
+//            initWith release
+        }
+    }
+
+    /*为apk自动替换生成新名字，格式如： [项目名]_[test/release]_[version]_[date].apk*/
+    applicationVariants.all { variant ->
+        variant.outputs.each { output ->
+            output.outputFile = new File(output.outputFile.parent,
+                    output.outputFile.name
+                            .replace("-debug", "_test")
+                            .replace("app", "ZHXY")
+                            .replace(".apk",
+                            "_" + defaultConfig.versionName
+                                    + "_" + InnerVersionName + ".apk")
+            )
+        }
+    }
+
+    compileOptions {
+        //必须配置jdk8，lambda必须
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    lintOptions {
+//        if true, stop the gradle build if errors are found
+        abortOnError false
+    }
+
+    //打包配置
+    packagingOptions {
+        exclude '.readme'
+        exclude 'LICENSE.txt'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/LGPL2.1'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/MANIFEST.MF'
+        exclude '!META-INF/MANIFEST.MF'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/README.txt'
+        exclude 'META-INF/dependencies.txt'
+        exclude 'META-INF/services/javax.annotation.processing.Processor'
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+    //多渠道打包
+//    productFlavors {
+//        xiaomi{
+//            applicationIdSuffix '.xiaomi'
+//        }
+//
+//        huawei{
+//            applicationIdSuffix '.huawei'
+//        }
+//
+//        qihu{
+//            applicationIdSuffix '.qihu'
+//        }
+//    }
+    buildToolsVersion '25.0.0'
+}
+
+
+retrolambda {
+    //指定将源码编译的级别，使用下列代码，会将代码编译到兼容1.6的字节码格式
+    javaVersion JavaVersion.VERSION_1_6
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    def app = rootProject.ext.android
+    //android
+    compile "com.android.support:recyclerview-v7:$app.supportVersion"
+    compile "com.android.support:appcompat-v7:$app.supportVersion"
+    compile "com.android.support:cardview-v7:$app.supportVersion"
+    compile "com.android.support:design:$app.supportVersion"
+    compile "com.android.support:support-annotations:$app.supportVersion"
+    //功能module
+    compile project(':library:GTAUtils')
+    compile project(':library:l_SwipeRefreshAndLoadMore')
+    compile project(':library:l_jpush')
+    compile project(path: ':library:StickyAdapter')
+    //账号密码 3462792044,gtaapp2016
+    //tencent bugly report
+    //http://bugly.qq.com/issueIndex?app=900033957&pid=1&ptag=1005-10000
+    compile 'com.tencent.bugly:crashreport:latest.release'
+    //rxjava   确保logging-interceptor版本和retrofit里面okhttp3的版本一致
+    compile 'io.reactivex:rxjava:1.2.9'
+    compile 'io.reactivex:rxandroid:1.2.1'
+    compile 'com.jakewharton.rxbinding:rxbinding:1.0.0'
+    //network
+    compile 'com.squareup.retrofit2:retrofit:2.2.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.2.0'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.2.0'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.6.0'
+    //时间选择空间
+    compile 'com.bigkoo:pickerview:2.0.8'
+    //字符串解析器
+    //compile 'com.squareup.retrofit2:converter-scalars:2.0.2'
+    //运行时权限
+    compile 'com.tbruyelle.rxpermissions:rxpermissions:0.7.0@aar'
+    //baseRecycler
+    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.8.5'
+    //tencent
+    // x5 webview http://x5.tencent.com/doc?id=1004
+    compile files('libs/tencent-x5-webview.jar')
+    //扫一扫
+    compile files('libs/zxing.jar')
+    compile 'com.kyleduo.switchbutton:library:1.4.1'
+    compile files('libs/fastjson-1.1.52.android.jar')
+    compile 'cn.aigestudio.wheelpicker:WheelPicker:1.1.1'
+    //日历控件
+    compile 'com.prolificinteractive:material-calendarview:1.4.2'
+    compile 'com.android.support:multidex:1.0.1'
+    compile project(':library:librarySwipListView')
+    compile 'com.jakewharton:butterknife:7.0.1'
+    //分享jar包
+    compile files('libs/hellocharts-library-1.5.8.jar')
+    compile files('libs/MobCommons-2016.1107.1809.jar')
+    compile files('libs/MobTools-2016.1107.1809.jar')
+    compile files('libs/ShareSDK-Core-2.7.10.jar')
+    compile files('libs/ShareSDK-QQ-2.7.10.jar')
+    compile files('libs/ShareSDK-Wechat-2.7.10.jar')
+    compile files('libs/ShareSDK-Wechat-Core-2.7.10.jar')
+    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5.1'
+    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.1'
+
+}

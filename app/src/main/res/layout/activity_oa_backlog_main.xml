@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_oa_backlog_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.gta.zssx.mobileOA.view.page.BacklogMainActivity">
+
+    <include layout="@layout/toolbar_oa_title" />
+
+    <com.gta.zssx.pub.hfrecyclerview.HFRecyclerView
+        android:id="@+id/rv_backlogs"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar" />
+
+    <TextView
+        android:id="@+id/tv_emptyHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="暂无数据"
+        android:textSize="18sp"
+        android:visibility="gone" />
+</RelativeLayout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/include_class_adapter_item_normal" />
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/include"
+        android:background="@color/gray_e6e6e6" />
+
+    <com.gta.zssx.pub.widget.MyScrollview
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:layout_below="@id/line">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_choose_item_name"
+                style="@style/dormitory_option_item_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:text="@string/string_select_subtraction_student"
+                android:textColor="@color/main_color" />
+
+            <com.gta.zssx.pub.widget.FixedScrollRecyclerView
+                android:id="@+id/recycler_option"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </com.gta.zssx.pub.widget.FixedScrollRecyclerView>
+
+            <com.gta.zssx.pub.widget.FixedScrollRecyclerView
+                android:id="@+id/recycler_class"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </com.gta.zssx.pub.widget.FixedScrollRecyclerView>
+        </LinearLayout>
+    </com.gta.zssx.pub.widget.MyScrollview>
+
+    <TextView
+        android:id="@+id/tv_empty"
+        style="@style/dormitory_option_item_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/string_empty"
+        android:visibility="gone" />
+</RelativeLayout>

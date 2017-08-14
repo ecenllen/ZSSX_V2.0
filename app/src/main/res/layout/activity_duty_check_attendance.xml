@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/include_toolbar"/>
+
+    <LinearLayout
+        android:id="@+id/layout_date"
+        android:layout_below="@+id/toolbar"
+        android:layout_gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:padding="10dp"
+            android:id="@+id/tv_duty_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="date"
+            android:drawablePadding="8dp"
+            android:drawableRight="@drawable/right_arrow_normal"/>
+        <TextView
+            android:id="@+id/tv_duty_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="10dp"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:text="登记" />
+    </LinearLayout>
+    <View
+        android:id="@+id/view_date_line"
+        android:layout_below="@+id/layout_date"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divide_line"/>
+
+    <!--View下检查-->
+    <RelativeLayout
+        android:layout_below="@+id/view_date_line"
+        android:id="@+id/layout_duty_check"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <include layout="@layout/duty_check_indicate"/>
+        <ScrollView
+            android:layout_below="@+id/layout_duty_check_indicate"
+            android:layout_above="@+id/layout_step"
+            android:id="@+id/sv_duty_check"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:visibility="visible">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <include layout="@layout/duty_check_attendance_info"/>
+                <include layout="@layout/duty_detail_info"/>
+            </LinearLayout>
+        </ScrollView>
+        <LinearLayout
+            android:id="@+id/layout_step"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp">
+            <TextView
+                android:id="@+id/tv_step_previous"
+                android:layout_marginRight="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:background="@drawable/stroke_btn_selector"
+                android:text="前一个"
+                android:gravity="center"/>
+            <TextView
+                android:id="@+id/tv_step_next"
+                android:layout_marginLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:background="@drawable/stroke_btn_selector"
+                android:text="下一个"
+                android:gravity="center"/>
+        </LinearLayout>
+        <TextView
+            android:visibility="visible"
+            android:id="@+id/tv_get_attendance_and_detail_fail"
+            android:layout_below="@+id/layout_duty_check_indicate"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/wirte_ffffff"
+            android:gravity="center"
+            android:text="无法进行值班检查"/>
+    </RelativeLayout>
+    <!--考勤为未检查时显示-->
+    <RelativeLayout
+        android:id="@+id/layout_duty_can_not_check"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/view_date_line"
+        android:background="#90ffffff">
+        <TextView
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="当前日期无法进行值日检查"
+            android:textColor="@color/word_color_666666"
+            android:textSize="@dimen/text_size_s18"/>
+    </RelativeLayout>
+
+    <!--整个空页面-->
+    <TextView
+        android:id="@+id/tv_all_empty_view"
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="暂无数据"
+        android:background="@color/wirte_ffffff"
+        android:visibility="gone">
+
+    </TextView>
+</RelativeLayout>

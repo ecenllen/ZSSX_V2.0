@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/ll_asset"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:weightSum="3">
+
+        <com.gta.zssx.patrolclass.popup.AnimationTextView
+            android:id="@+id/tv_adjust_course"
+            style="@style/add_page_item_style"
+            android:drawableTop="@drawable/the_substitute_for"
+            android:text="调代课申请"/>
+
+        <com.gta.zssx.patrolclass.popup.AnimationTextView
+            android:id="@+id/tv_asset_dispatch"
+            style="@style/add_page_item_style"
+            android:drawableTop="@drawable/tab_distribution"
+            android:text="资产分配"/>
+
+        <com.gta.zssx.patrolclass.popup.AnimationTextView
+            android:id="@+id/tv_asset_transform"
+            style="@style/add_page_item_style"
+            android:drawableTop="@drawable/tab_transfer"
+            android:text="资产转移"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                >
+
+                <com.gta.zssx.patrolclass.popup.AnimationTextView
+                    android:id="@+id/tv_asset_repair"
+                    style="@style/add_page_item_style"
+                    android:drawableTop="@drawable/tab_repair"
+                    android:text="资产维修"/>
+
+                <com.gta.zssx.patrolclass.popup.AnimationTextView
+                    android:id="@+id/tv_asset_scrap"
+                    style="@style/add_page_item_style"
+                    android:drawableTop="@drawable/tab_scrap"
+                    android:text="资产报废"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

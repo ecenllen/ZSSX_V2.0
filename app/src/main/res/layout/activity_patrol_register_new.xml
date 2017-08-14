@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/line"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rl_date"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="5dp"
+                    android:text="巡视日期"
+                    android:textColor="@color/gray_999999"
+                    android:textSize="16sp"
+                    />
+
+                <ImageView
+                    android:id="@+id/iv_right_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:paddingRight="5dp"
+                    android:src="@drawable/right_arrow_normal"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_patrolRegister_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:layout_toLeftOf="@id/iv_right_arrow"
+                    android:text=""
+                    android:textColor="@color/gray_666666"
+                    android:textSize="16sp"
+                    />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/divide_line"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_class"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="5dp"
+                    android:text="班级"
+                    android:textColor="@color/gray_999999"
+                    android:textSize="16sp"
+                    />
+
+                <ImageView
+                    android:id="@+id/iv_right_arrow_class"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:paddingRight="5dp"
+                    android:src="@drawable/right_arrow_normal"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_patrolRegister_className"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:layout_toLeftOf="@id/iv_right_arrow_class"
+                    android:text=""
+                    android:textColor="@color/gray_666666"
+                    android:textSize="16sp"
+                    />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/divide_line"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_section"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="5dp"
+                    android:text="上课节次"
+                    android:textColor="@color/gray_999999"
+                    android:textSize="16sp"
+                    />
+
+                <ImageView
+                    android:id="@+id/iv_right_arrow_section"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:paddingRight="5dp"
+                    android:src="@drawable/right_arrow_normal"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_patrolRegister_sections"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:layout_toLeftOf="@id/iv_right_arrow_section"
+                    android:text=""
+                    android:textColor="@color/gray_666666"
+                    android:textSize="16sp"
+                    />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/divide_line"
+                    />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@color/gray_d7d7d7"
+                android:paddingBottom="2dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="2dp"
+                android:text="得分详情"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/patrol_tablayout"
+                style="@style/CustomTabLayout"
+                android:layout_width="0dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                app:tabMode="scrollable"
+                >
+            </android.support.design.widget.TabLayout>
+
+            <TextView
+                android:id="@+id/text_view_add_teacher"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:padding="10dp"
+                android:text="增加"
+                android:textColor="@color/blue"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/patrol_viewpage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </android.support.v4.view.ViewPager>
+
+        <TextView
+            android:id="@+id/text_view_patrol_register_add_teacher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="点此添加教师"
+            android:textSize="20sp"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/submit_patrol"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@color/divide_line"
+        />
+
+    <TextView
+        android:id="@+id/submit_patrol"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/alpha_gray"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="提交"
+        android:textColor="@color/white"
+        android:textSize="16sp"/>
+
+
+</RelativeLayout>

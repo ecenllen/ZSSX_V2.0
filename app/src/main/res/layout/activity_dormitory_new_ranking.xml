@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/layout_select_date"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_dormitory_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/string_dormitory_ranking_date"
+            android:textSize="@dimen/two_level_word" />
+
+        <TextView
+            android:id="@+id/tv_dormitory_date_show"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:text="-"
+            android:textSize="@dimen/two_level_word"
+            android:layout_toRightOf="@+id/tv_dormitory_date"
+            android:gravity="end"
+            />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/divide_line"/>
+
+    <RelativeLayout
+        android:id="@+id/layout_select_item"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_dormitory_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/string_dormitory_ranking_item"
+            android:textSize="@dimen/two_level_word"
+            />
+
+        <TextView
+            android:id="@+id/tv_dormitory_item_show"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/please_choose"
+            android:textSize="@dimen/two_level_word"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:gravity="end"
+            android:layout_toRightOf="@+id/tv_dormitory_item"
+            android:layout_alignBottom="@+id/tv_dormitory_item"
+            android:layout_toLeftOf="@+id/iv_image_arrow" />
+
+        <ImageView
+            android:id="@+id/iv_image_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/right_arrow_normal" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/divide_line"/>
+
+    <RelativeLayout
+        android:id="@+id/layout_select_level"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_dormitory_level"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/string_dormitory_dormitory"
+            android:textSize="@dimen/two_level_word"
+            />
+
+        <TextView
+            android:id="@+id/tv_dormitory_level_show"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="全部"
+            android:textSize="@dimen/two_level_word"
+            android:layout_toLeftOf="@+id/iv_image_arrow_2"
+            android:layout_toRightOf="@+id/tv_dormitory_level"
+            android:gravity="end"
+            android:layout_centerVertical="true"
+            android:singleLine="true"
+            android:ellipsize="end"/>
+
+        <ImageView
+            android:id="@+id/iv_image_arrow_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/right_arrow_normal" />
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/divide_line"/>
+</LinearLayout>

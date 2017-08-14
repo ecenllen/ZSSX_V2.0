@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/schedule_listview_bg_line"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/schedule_lv_date_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="9:45-11:00"
+                android:textSize="@dimen/text_size_s14"
+                android:textColor="@color/word_color_999999"
+                android:paddingBottom="5dp"/>
+
+            <TextView
+                android:id="@+id/schedule_lv_finish_tv"
+                android:layout_width="60dp"
+                android:layout_height="25dp"
+                android:background="@drawable/schedule_state_btn2"
+                android:gravity="center"
+                android:text="已完成"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="55dp"
+            android:layout_marginBottom="3dp"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/split_line_01" />
+
+        <TextView
+            android:id="@+id/schedule_lv_content_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:gravity="center_vertical"
+
+            android:text=""
+            android:textSize="@dimen/text_size_s14"
+            android:textColor="@color/word_color_999999"
+            android:padding="6dp" />
+    </LinearLayout>
+</LinearLayout>

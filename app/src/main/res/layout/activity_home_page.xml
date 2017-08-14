@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#ffffff">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_main"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/main_color"
+        app:title=" ">
+
+        <TextView
+            android:id="@+id/tv_toolbar_title_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="中山沙溪理工学校"
+            android:textColor="@color/white"
+            android:textSize="21sp"/>
+    </android.support.v7.widget.Toolbar>
+
+
+    <include
+        layout="@layout/include_buttom_tab"
+        />
+
+    <ImageView
+        android:id="@+id/iv_home_page_log"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar_main"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/home_page"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottom_layout"
+        android:layout_below="@+id/iv_home_page_log">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--课堂日志-->
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_view_class_log"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:foreground="?attr/selectableItemBackground"
+                app:cardCornerRadius="1dp"
+                app:cardPreventCornerOverlap="true">
+
+                <LinearLayout
+                    android:id="@+id/ll_class_log"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="157dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/class_log_button_bg">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:lineSpacingExtra="8dp"
+                            android:text="课  堂\n日  志"
+                            android:textColor="@color/wirte_ffffff"
+                            android:textSize="20sp"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/imageView2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/home_class_log_button"/>
+                    </RelativeLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+            <!--课堂巡视-->
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_view_class_patrol"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:foreground="?attr/selectableItemBackground"
+                app:cardCornerRadius="1dp"
+                app:cardPreventCornerOverlap="true">
+
+
+                <LinearLayout
+                    android:id="@+id/ll_class_patrol"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="157dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/class_look_button_bg">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:lineSpacingExtra="8dp"
+                            android:text="课  堂\n巡  视"
+                            android:textColor="@color/wirte_ffffff"
+                            android:textSize="20sp"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true">
+
+                        <ImageView
+                            android:id="@+id/imageView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/home_class_patrol_button"/>
+                    </RelativeLayout>
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+            <!--资产管理-->
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_view_asset_management"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:foreground="?attr/selectableItemBackground"
+                app:cardCornerRadius="1dp"
+                app:cardPreventCornerOverlap="true">
+
+
+                <LinearLayout
+                    android:id="@+id/ll_asset"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="157dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/asset_button_bg">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:lineSpacingExtra="8dp"
+                            android:text="资  产\n管  理"
+                            android:textColor="@color/wirte_ffffff"
+                            android:textSize="20sp"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/tab_assets"/>
+                    </RelativeLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <!-- OA协同 -->
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_view_mobile_oa"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:foreground="?attr/selectableItemBackground"
+                android:visibility="gone"
+                app:cardCornerRadius="1dp"
+                app:cardPreventCornerOverlap="true">
+
+
+                <LinearLayout
+                    android:id="@+id/ll_oa"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="157dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/asset_button_bg">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:lineSpacingExtra="8dp"
+                            android:text="@string/text_mobile_oa"
+                            android:textColor="@color/wirte_ffffff"
+                            android:textSize="20sp"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/tab_assets"/>
+                    </RelativeLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <!--调代课-->
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_view_adjust_course"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:foreground="?attr/selectableItemBackground"
+                app:cardCornerRadius="1dp"
+                app:cardPreventCornerOverlap="true">
+
+
+                <LinearLayout
+                    android:id="@+id/ll_adjust_course"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="157dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/asset_button_bg">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:lineSpacingExtra="8dp"
+                            android:text="调代课"
+                            android:textColor="@color/wirte_ffffff"
+                            android:textSize="20sp"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/tab_assets"/>
+                    </RelativeLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

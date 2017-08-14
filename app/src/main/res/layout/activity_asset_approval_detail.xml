@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/app_bar"
+        android:background="@color/main_color"
+        android:minHeight="@dimen/app_bar"
+        app:navigationIcon="@drawable/ic_left_arrow_white">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_title_approval"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxWidth="250dp"
+                android:singleLine="true"
+                android:text="资产维修申请单"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_s18"/>
+
+            <TextView
+                android:id="@+id/tv_title_approval_NO"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxWidth="250dp"
+                android:singleLine="true"
+                android:text="单号：WXD20170428001"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_s11"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_approval_history"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="end"
+            android:padding="12dp"
+            android:text="@string/approval_history"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_s16"/>
+
+    </android.support.v7.widget.Toolbar>
+
+
+    <com.tencent.smtt.sdk.WebView
+        android:id="@+id/asset_management_web_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </com.tencent.smtt.sdk.WebView>
+
+</LinearLayout>

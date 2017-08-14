@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--指标项架构,默认展示-->
+    <ExpandableListView
+        android:id="@+id/expendlist"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/wirte_ffffff">
+
+    </ExpandableListView>
+    <TextView
+        android:background="@color/wirte_ffffff"
+        android:id="@+id/tv_item_empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="暂无指标项数据"
+        android:textSize="@dimen/one_level_word"
+        android:visibility="gone"/>
+</RelativeLayout>

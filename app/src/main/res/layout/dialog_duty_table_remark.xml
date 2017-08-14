@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="#00ffffff">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="240dp"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="@string/text_remark2"
+            android:textSize="@dimen/text_size_s16"
+            android:textColor="@color/wirte_ffffff"
+            android:background="@drawable/dialog_title_green"/>
+
+        <View
+            android:layout_width="240dp"
+            android:layout_height="0.5dp"
+            android:background="@color/view_line"/>
+
+        <LinearLayout
+            android:padding="10dp"
+            android:layout_width="240dp"
+            android:layout_height="320dp"
+            android:background="@drawable/dialog_content_white">
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:padding="5dp"
+                    android:id="@+id/dialog_content_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:text="备注内容"
+                    android:textSize="@dimen/size40"
+                    android:textColor="@color/word_color_666666"/>
+            </ScrollView>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</LinearLayout>

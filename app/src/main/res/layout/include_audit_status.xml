@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/audit_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="15dp"
+    android:orientation="vertical"
+    tools:showIn="@layout/activity_apply_detail">
+
+    <TextView
+        style="@style/AdjustCourse_333333_s16_Style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray_dbdbdb"
+        android:padding="10dp"
+        android:text="审核信息"/>
+
+    <LinearLayout
+        android:id="@+id/audit_idea_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <TextView
+            style="@style/AdjustCourse_666666_s15_Style"
+            android:id="@+id/audit_count_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="审核意见（100字）"/>
+
+        <com.gta.zssx.pub.widget.DisableEmojiEditText
+            android:id="@+id/audit_idea_edit"
+            style="@style/AdjustCourse_666666_s15_Style"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_margin="6dp"
+            android:background="@drawable/react_shape"
+            android:gravity="left|top"
+            android:hint="选填"
+            android:maxLength="100"
+            android:padding="5dp"
+            android:scrollbars="vertical"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/audit_detail_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp">
+
+            <TextView
+                style="@style/AdjustCourse_666666_s15_Style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="审核情况"/>
+
+            <TextView
+                style="@style/AdjustCourse_666666_s15_Style"
+                android:id="@+id/audit_status_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="已同意"/>
+        </LinearLayout>
+
+        <include layout="@layout/include_line"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp">
+
+            <TextView
+                style="@style/AdjustCourse_666666_s15_Style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="审核意见"/>
+
+            <TextView
+                style="@style/AdjustCourse_666666_s15_Style"
+                android:id="@+id/audit_idea_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="已同意"/>
+        </LinearLayout>
+
+        <include layout="@layout/include_line"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp">
+
+            <TextView
+                style="@style/AdjustCourse_666666_s15_Style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="审核时间"/>
+
+            <TextView
+                style="@style/AdjustCourse_666666_s15_Style"
+                android:id="@+id/audit_time_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="已同意"/>
+        </LinearLayout>
+
+        <include layout="@layout/include_line"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp">
+
+            <TextView
+                style="@style/AdjustCourse_666666_s15_Style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="审  核  者"/>
+
+            <TextView
+                style="@style/AdjustCourse_666666_s15_Style"
+                android:id="@+id/audit_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="已同意"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

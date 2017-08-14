@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/no_data_img"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_centerInParent="true"
+              android:orientation="vertical">
+    <ImageView
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/failure"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:text="暂时没有数据"
+        android:textColor="#bdbdbd"
+        android:textSize="15sp"/>
+</LinearLayout>

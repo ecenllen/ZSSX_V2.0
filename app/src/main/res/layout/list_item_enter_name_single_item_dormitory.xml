@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_option_student_bed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:gravity="right"
+            android:minEms="2"
+            style="@style/dormitory_option_item_name"
+            android:text="10床"
+            android:layout_alignParentLeft="true" />
+
+        <TextView
+            android:id="@+id/tv_single_student_div"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_toRightOf="@+id/tv_option_student_bed"
+            android:text="："
+            android:textColor="@color/textColor_def_bright"
+            style="@style/dormitory_option_item_name"/>
+
+       <TextView
+            android:id="@+id/tv_option_student_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_toRightOf="@+id/tv_single_student_div"
+            android:layout_toLeftOf="@+id/cb_option_checkbox"
+           android:singleLine="true"
+            android:text="学生姓名"
+            style="@style/dormitory_option_item_name"
+            android:textColor="@color/textColor_def"/>
+
+        <CheckBox
+            android:id="@+id/cb_option_checkbox"
+            android:clickable="false"
+            android:layout_width="wrap_content"
+            android:button="@drawable/checkbox_selector"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" />
+</RelativeLayout>

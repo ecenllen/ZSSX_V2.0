@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:background="@color/wirte_ffffff">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <!--考勤-->
+        <include layout="@layout/course_sign_info_regist"/>
+        <!--学生列表-->
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/student_list_rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never" />
+    </LinearLayout>
+    <!--灰色遮罩，当开启和上一节相同的时候使用-->
+    <TextView
+        android:layout_marginTop="60dp"
+        android:id="@+id/tv_can_not_change_status"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#20000000"
+        android:visibility="gone"/>
+</FrameLayout>

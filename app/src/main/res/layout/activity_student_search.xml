@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/wirte_ffffff">
+
+    <RelativeLayout
+        android:background="@color/main_color"
+        android:id="@+id/relative_layout_student"
+        android:layout_width="match_parent"
+        android:layout_height="@android:dimen/app_icon_size"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp">
+
+        <!--<ImageView-->
+        <!--android:id="@+id/"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:src="@drawable/express_new_select_user_search_bg"/>-->
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:id="@+id/finish_search_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:padding = "10dp"
+            android:drawableLeft="@drawable/ic_left_arrow_white"/>
+        <LinearLayout
+            android:layout_marginRight="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/finish_search_tv"
+            android:background="@drawable/circle_search_bg"
+            android:orientation="horizontal">
+
+            <com.gta.zssx.pub.widget.ClearEditText
+                android:id="@+id/search_edittext"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@null"
+                android:drawableLeft="@drawable/ic_magnifier"
+                android:drawablePadding="12dp"
+                android:drawableRight="@drawable/ic_close_search"
+                android:hint="搜索学生"
+                android:paddingRight="15dp"
+                android:singleLine="true"
+                android:textSize="15sp"/>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:overScrollMode="never"
+        android:id="@+id/search_student_rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        android:layout_below="@+id/relative_layout_student"/>
+
+    <TextView
+        android:layout_below="@+id/relative_layout_student"
+        android:id="@+id/no_data_tv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="暂无数据"
+        android:visibility="gone"
+        android:textSize="18sp"/>
+
+</RelativeLayout>

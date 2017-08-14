@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center">
+
+    <RelativeLayout
+        android:id="@+id/rl_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/main_color">
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="@null"
+            android:text="@string/text_cancel"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/validate_seal_pwd"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_s16" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv_seal"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_below="@+id/rl_head"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp_8"
+        android:src="@drawable/app_icon" />
+
+    <TextView
+        android:id="@+id/tv_seal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_seal"
+        android:layout_marginLeft="@dimen/dp_24"
+        android:layout_marginRight="@dimen/dp_24"
+        android:layout_marginTop="@dimen/dp_8"
+        android:gravity="center"
+        android:text="印章名印章名印章名印章名印章名印章名印章名印章名印章名印章名" />
+
+    <com.gta.zssx.pub.widget.ClearEditText
+        android:id="@+id/et_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_seal"
+        android:layout_marginLeft="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_8"
+        android:layout_toLeftOf="@+id/tv_confirm"
+        android:background="@drawable/input_disabled"
+        android:hint="请输入签章密码"
+        android:inputType="textPassword"
+        android:padding="@dimen/dp_8"
+        android:textSize="@dimen/text_size_s12" />
+
+    <TextView
+        android:id="@+id/tv_pwd_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/et_pwd"
+        android:layout_below="@+id/et_pwd"
+        android:padding="@dimen/dp_8"
+        android:text="@string/hint_pwd_error"
+        android:textColor="@color/red"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/tv_confirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/et_pwd"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:layout_marginLeft="@dimen/dp_16"
+        android:layout_marginRight="@dimen/dp_16"
+        android:background="@color/main_color"
+        android:padding="@dimen/dp_8"
+        android:text="@string/confirm"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_s12" />
+
+</RelativeLayout>

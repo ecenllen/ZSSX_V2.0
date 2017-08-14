@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <include layout="@layout/include_toolbar"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:padding="20dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="日程类型：" />
+
+            <RadioGroup
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/schedule_new_rb1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="工作事务"
+                    android:textColor="@color/word_color_666666"/>
+
+                <RadioButton
+                    android:layout_marginLeft="20dp"
+                    android:id="@+id/schedule_new_rb2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="个人事务"
+                    android:textColor="@color/word_color_666666"/>
+                <!--<TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="个人事务" />-->
+            </RadioGroup>
+        </LinearLayout>
+
+        <View
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/divide_line"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_begin_time"
+                android:id="@+id/tv_begin"
+                android:paddingRight="5dp"/>
+            <TextView
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@+id/tv_begin"
+                android:id="@+id/schedule_new_starttime_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:textColor="@color/word_color_666666"
+                android:text="time"
+                android:paddingLeft="8dp"
+                android:layout_alignParentRight="true"/>
+            <!-- <TextView
+                 android:layout_toLeftOf="@+id/schedule_new_starttime_tv"
+                 android:id="@+id/schedule_new_startdate_tv"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:gravity="center"
+                 android:textColor="@color/word_color_666666"
+                 android:text="date"
+                 android:paddingRight="8dp"/>-->
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/divide_line"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_end_time"
+                android:id="@+id/tv_end"
+                android:paddingRight="5dp"/>
+            <TextView
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@+id/tv_end"
+                android:id="@+id/schedule_new_endtime_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:textColor="@color/word_color_666666"
+                android:text="time"
+                android:paddingLeft="8dp"
+                android:layout_alignParentRight="true"/>
+            <!--  <TextView
+                  android:layout_toLeftOf="@+id/schedule_new_endtime_tv"
+                  android:id="@+id/schedule_new_enddate_tv"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:gravity="center"
+                  android:textColor="@color/word_color_666666"
+                  android:text="date"
+                  android:paddingRight="8dp"/>-->
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/divide_line"/>
+
+        <View
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/divide_line"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:gravity="center_vertical"
+                android:id="@+id/tv_ring_cycle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_ring_cycle"/>
+
+            <LinearLayout
+                android:layout_toRightOf="@+id/tv_ring_cycle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp">
+                <TextView
+                    android:gravity="right"
+                    android:id="@+id/schedule_new_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_not_ring"
+                    android:paddingRight="5dp"
+                    android:drawablePadding="10dp"
+                    android:drawableRight="@drawable/right_arrow_normal"/>
+
+            </LinearLayout>
+
+            <!-- <Spinner
+                 android:id="@+id/schedule_new_spinner"
+                 android:layout_width="0dp"
+                 android:layout_height="wrap_content"
+                 android:layout_marginLeft="8dp"
+                 android:layout_marginRight="40dp"
+                 android:layout_weight="1" />-->
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/divide_line"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginTop="10dp"
+            android:text="内容" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/schedule_body_bg"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/schedule_new_remaining_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:gravity="right"
+                android:text="您还可以输入50个字"
+                />
+
+            <EditText
+                android:id="@+id/schedule_new_content_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/schedule_new_remaining_tv"
+                android:layout_alignParentTop="true"
+                android:layout_marginBottom="4dp"
+                android:background="@null"
+                android:gravity="top"
+                android:maxLength="50"
+                android:inputType="textMultiLine" />
+        </RelativeLayout>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tv_delete_schedule"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft= "30dp"
+        android:layout_marginRight = "30dp"
+        android:layout_marginTop= "5dp"
+        android:layout_marginBottom="25dp"
+        android:background="@drawable/circleconer_button_white_logout"
+        android:gravity="center"
+        android:padding="12dp"
+        android:text="@string/text_delete_schedule"
+        android:textColor="@color/red_logout"
+        android:textSize="@dimen/size40"
+        android:visibility="gone"/>
+</LinearLayout>

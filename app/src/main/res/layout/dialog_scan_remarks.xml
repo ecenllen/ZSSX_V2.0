@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    app:cardBackgroundColor="@color/wirte_ffffff"
+    app:cardCornerRadius="8dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:id="@+id/cancel_remark_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="取消"
+                android:textColor="@color/gray_666666"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="备注"
+                android:textColor="@color/gray_666666"
+                android:textSize="18sp"
+                />
+
+            <TextView
+                android:id="@+id/save_remark_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/radio_buttion_unusual_unselected"
+                android:paddingBottom="4dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingTop="4dp"
+                android:text="保存"
+                android:textColor="@color/gray_666666"
+                />
+        </RelativeLayout>
+
+        <include layout="@layout/include_line"/>
+
+        <LinearLayout
+            android:id="@+id/ll_system_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="系统记录数量："
+                android:textColor="@color/gray_666666"
+                />
+
+            <TextView
+                android:id="@+id/tv_system_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/gray_666666"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_current_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="目前已盘点数量："
+                android:textColor="@color/gray_666666"
+                />
+
+            <TextView
+                android:id="@+id/tv_current_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/gray_666666"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="备注"
+                android:textColor="@color/gray_666666"
+                />
+
+            <TextView
+                android:id="@+id/text_count_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="（剩余40字）"
+                android:textColor="@color/gray_666666"/>
+        </LinearLayout>
+
+        <RadioGroup
+            android:id="@+id/remark_radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            >
+
+            <RadioButton
+                android:id="@+id/find_radio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radio_button_normal_selector"
+                android:button="@null"
+                android:padding="4dp"
+                android:text="@string/find_text"
+                android:textColor="@color/radio_button_green_selector"/>
+
+            <RadioButton
+
+                android:id="@+id/no_match_radio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/radio_button_normal_selector"
+                android:button="@null"
+                android:padding="4dp"
+                android:text="@string/no_match_text"
+                android:textColor="@color/radio_button_green_selector"/>
+
+            <RadioButton
+                android:id="@+id/no_clear_radio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/radio_button_normal_selector"
+                android:button="@null"
+                android:padding="4dp"
+                android:text="@string/no_clear_text"
+                android:textColor="@color/radio_button_green_selector"/>
+
+        </RadioGroup>
+
+        <RadioGroup
+            android:id="@+id/remark_radio_group2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/find_radio2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radio_button_normal_selector"
+                android:button="@null"
+                android:padding="4dp"
+                android:text="@string/find_text2"
+                android:textColor="@color/radio_button_green_selector"/>
+
+            <RadioButton
+
+                android:id="@+id/no_match_radio2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/radio_button_normal_selector"
+                android:button="@null"
+                android:padding="4dp"
+                android:text="@string/no_match_text2"
+                android:textColor="@color/radio_button_green_selector"/>
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/remark_et"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="@drawable/radio_buttion_unusual_unselected"
+                android:gravity="left"
+                android:maxLength="40"
+                android:padding="3dp"
+                android:textColor="@color/gray_666666"/>
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/tv_prompt_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="提示：\n将对当前列表下未备注的资产批量添加备注。"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+</android.support.v7.widget.CardView>

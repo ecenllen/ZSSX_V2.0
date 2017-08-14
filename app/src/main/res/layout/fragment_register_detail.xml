@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <include layout="@layout/include_toolbar"/>
+
+    <RelativeLayout
+        android:id="@+id/layout_time_select"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="上课日期"
+            android:textSize="@dimen/two_level_word"
+            android:textColor="@color/word_color_999999"
+            android:paddingRight="10dp"/>
+
+        <TextView
+            android:id="@+id/course_date_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:drawablePadding="10dp"
+            android:drawableRight="@drawable/right_arrow_normal"
+            android:text=""
+            android:textSize="@dimen/two_level_word"
+            android:textColor="@color/gray_666666"/>
+
+    </RelativeLayout>
+
+    <include layout="@layout/include_line"/>
+
+    <RelativeLayout
+        android:id="@+id/layout_class_show"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp">
+
+        <TextView
+            android:id="@+id/tv_class_show"
+            android:paddingRight="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="上课班级"
+            android:textSize="@dimen/two_level_word"
+            android:textColor="@color/word_color_999999"/>
+
+        <TextView
+            android:layout_toRightOf="@+id/tv_class_show"
+            android:id="@+id/course_class_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:layout_marginRight="10dp"
+            android:text="上课班级"
+            android:textSize="@dimen/two_level_word"
+            android:textColor="@color/gray_666666"/>
+
+    </RelativeLayout>
+
+    <include layout="@layout/include_line"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!--上课节次-->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:visibility="visible">
+
+                <TextView
+                    android:paddingTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="上课节次"
+                    android:textSize="@dimen/two_level_word"
+                    android:textColor="@color/word_color_999999"/>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_section"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"/>
+            </LinearLayout>
+            <include layout="@layout/include_line"/>
+            <!--课程名称-->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:visibility="visible">
+
+                <TextView
+                    android:paddingTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="课程名称"
+                    android:textSize="@dimen/two_level_word"
+                    android:textColor="@color/word_color_999999"/>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_course"
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:descendantFocusability="afterDescendants"/>
+
+            </LinearLayout>
+            <include layout="@layout/include_line"/>
+            <!--上课教师-->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:visibility="visible">
+
+                <TextView
+                    android:paddingTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="上课教师"
+                    android:textSize="@dimen/two_level_word"
+                    android:textColor="@color/word_color_999999"/>
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_teacher"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- 下面废弃-->
+    <!--<RelativeLayout
+        android:id="@+id/layout_section_select"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="上课节次"
+            android:textColor="@color/gray_999999"/>
+        <TextView
+            android:id="@+id/section_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:drawablePadding="10dp"
+            android:drawableRight="@drawable/right_arrow_normal"
+            android:text="@string/no_unsign_section"
+            android:textColor="@color/gray_666666"/>
+    </RelativeLayout>
+
+    <include layout="@layout/include_line"/>
+
+    <RelativeLayout
+        android:id="@+id/layout_class_name_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp">
+
+        <TextView
+            android:id="@+id/textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:text="课程名称"
+            android:textColor="@color/gray_999999"/>
+
+        <com.gta.zssx.pub.widget.DisableEmojiEditText
+            android:id="@+id/course_name_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@+id/textview"
+            android:background="@null"
+            android:gravity="right"
+            android:hint="请输入课程名称"
+            android:maxLength="20"
+            android:textColorHint="@color/gray_dcdcdc"
+            android:textSize="15sp"
+            />
+    </RelativeLayout>
+
+    <include layout="@layout/include_line"/>-->
+
+</LinearLayout>

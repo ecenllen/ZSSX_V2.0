@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <include layout="@layout/title_select_semester_week"/>
+        <RelativeLayout
+            android:layout_below="@+id/select_semester_week_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <com.gta.zssx.pub.hfrecyclerview.HFRecyclerView
+                android:id="@+id/rv_schedule"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none"/>
+            <TextView
+                android:id="@+id/tv_emptyHint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textSize="18sp"
+                android:text="暂无数据"
+                android:visibility="gone"/>
+        </RelativeLayout>
+    </RelativeLayout>
+    <TextView
+        android:background="@color/wirte_ffffff"
+        android:id="@+id/tv_all_empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textSize="18sp"
+        android:text="暂无数据"
+        android:visibility="gone"/>
+</RelativeLayout>
